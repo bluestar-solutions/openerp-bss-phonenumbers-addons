@@ -21,7 +21,7 @@
 
 {
     'name': 'CRM Phone Numbers',
-    'version': 'master',
+    'version': '7.0.2.0',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A module to format phone numbers in CRM.""",
