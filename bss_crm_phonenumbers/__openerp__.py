@@ -29,7 +29,7 @@
     'website': 'http://www.blues2.ch',
     'depends': ['crm', 'bss_partner_phonenumbers'],
     'init_xml': [],
-    'update_xml': [],
+    'update_xml': ['bss_crm_phonenumbers_lead_config_view.xml'],
     'demo_xml': [],
     'test': [],
     'installable': True,
