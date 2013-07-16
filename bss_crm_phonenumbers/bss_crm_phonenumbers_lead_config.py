@@ -25,40 +25,40 @@ from openerp.addons.bss_phonenumbers.bss_phonumbers_fields import bss_phonenumbe
 import phonenumbers
 import base64
 
-class bluestar_partner_phonenumbers_failed(osv.osv_memory):
+class bluestar_lead_phonenumbers_failed(osv.osv_memory):
     
-    _name = 'bss.partner.phonenumbers.failed'
+    _name = 'bss.lead.phonenumbers.failed'
     _description = 'Failed Phone Numbers'
     
     _columns = {
-        'partner_id': fields.many2one('res.partner', 'Partner', required=True),
+        'lead_id': fields.many2one('crm.lead', 'Lead', required=True),
         'phone': fields.char('Phone', size=64),
         'mobile': fields.char('Mobile', size=64),
         'fax': fields.char('Fax', size=64),
     }
     
-bluestar_partner_phonenumbers_failed()
+bluestar_lead_phonenumbers_failed()
 
-class bluestar_partner_phonenumbers_config(osv.osv_memory):
+class bluestar_lead_phonenumbers_config(osv.osv_memory):
     
-    _name = 'bss.partner.phonenumbers.config'
+    _name = 'bss.lead.phonenumbers.config'
     _inherit = 'res.config'
-    _description = 'Partner Phonenumbers Configuration'
+    _description = 'Lead Phonenumbers Configuration'
     
     
     def default_get(self, cr, uid, fields, context=None):            
         res = dict()
         if context and 'failed_ids' in context:
             CRLF = '\r\n'
-            failed_obj = self.pool.get('bss.partner.phonenumbers.failed')
+            failed_obj = self.pool.get('bss.lead.phonenumbers.failed')
             
             res['failed_ids'] = context['failed_ids']
             res['success'] = (len(res['failed_ids']) == 0)
-            res['output_file_name'] = 'failed_partner_phone_numbers.csv'
+            res['output_file_name'] = 'failed_lead_phone_numbers.csv'
             
-            file_content = '%s,%s,%s,%s' % ('Partner', 'Phone', 'Mobile', 'Fax') + CRLF
+            file_content = '%s,%s,%s,%s' % ('Lead', 'Phone', 'Mobile', 'Fax') + CRLF
             for failed in failed_obj.browse(cr, uid, res['failed_ids'], context):
-                file_content += '%s,%s,%s,%s' % (failed.partner_id.name, 
+                file_content += '%s,%s,%s,%s' % (failed.lead_id.name, 
                                                  failed.phone, 
                                                  failed.mobile, 
                                                  failed.fax) + CRLF   
@@ -68,7 +68,7 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
 
     _columns = {
         'country_id': fields.many2one('res.country', 'Default Country', required=True),
-        'failed_ids': fields.many2many('bss.partner.phonenumbers.failed', 'bss_partner_phonenumbers_failed_rel',
+        'failed_ids': fields.many2many('bss.lead.phonenumbers.failed', 'bss_lead_phonenumbers_failed_rel',
                                        'config_id', 'failed_id', 'Failed Phone Numbers', readonly=True),
         'output_file_stream': fields.binary(string='Download', readonly=True),
         'output_file_name': fields.char('Filename', size=64, readonly=True),
@@ -77,80 +77,80 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
     
     def execute(self, cr, uid, ids, context=None):
         mod_obj = self.pool.get('ir.model.data')
-        failed_obj = self.pool.get('bss.partner.phonenumbers.failed')
+        failed_obj = self.pool.get('bss.lead.phonenumbers.failed')
         
         config = self.browse(cr, uid, ids, context)[0]
         
-        cr.execute("SELECT id, phone, mobile, fax FROM res_partner")
+        cr.execute("SELECT id, phone, mobile, fax FROM crm_lead")
         failed_ids = []
         rows = cr.fetchall ()
         for row in rows:
-            partner = {'id': row[0],
-                       'phone': row[1],
-                       'mobile': row[2],
-                       'fax': row[3]}
+            lead = {'id': row[0],
+                    'phone': row[1],
+                    'mobile': row[2],
+                    'fax': row[3]}
             failed = {}
 
             try:
-                pn = phonumbers_converter._parse(partner['phone'], config.country_id.code)
+                pn = phonumbers_converter._parse(lead['phone'], config.country_id.code)
                 if  pn:          
-                    partner['phone'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                    lead['phone'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
                 else:
-                    partner['phone'] = None
+                    lead['phone'] = None
             except phonenumbers.NumberParseException:
-                failed['phone'] = partner['phone']
-                partner['phone'] = None
+                failed['phone'] = lead['phone']
+                lead['phone'] = None
                 pass  
             try:
-                pn = phonumbers_converter._parse(partner['mobile'], config.country_id.code)
+                pn = phonumbers_converter._parse(lead['mobile'], config.country_id.code)
                 if  pn:          
-                    partner['mobile'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                    lead['mobile'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
                 else:
-                    partner['mobile'] = None
+                    lead['mobile'] = None
             except phonenumbers.NumberParseException:
-                failed['mobile'] = partner['mobile']
-                partner['mobile'] = None
+                failed['mobile'] = lead['mobile']
+                lead['mobile'] = None
                 pass
             try:
-                pn = phonumbers_converter._parse(partner['fax'], config.country_id.code)
+                pn = phonumbers_converter._parse(lead['fax'], config.country_id.code)
                 if  pn:          
-                    partner['fax'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                    lead['fax'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
                 else:
-                    partner['fax'] = None
+                    lead['fax'] = None
             except phonenumbers.NumberParseException:
-                failed['fax'] = partner['fax']
-                partner['fax'] = None
+                failed['fax'] = lead['fax']
+                lead['fax'] = None
                 pass
           
             if failed:   
-                failed['partner_id'] = partner['id']
+                failed['lead_id'] = lead['id']
                 failed_ids.append(failed_obj.create(cr, uid, failed))
 
             cr.execute ("""
-                UPDATE res_partner 
+                UPDATE crm_lead
                 SET phone = %(phone)s,
                     mobile = %(mobile)s,
                     fax = %(fax)s
                 WHERE id = %(id)s
-            """, partner)
+            """, lead)
 
         model_data_ids = mod_obj.search(cr, uid,[('model', '=', 'ir.ui.view'), 
-                                                 ('name', '=', 'view_bss_partner_phonenumbers_config_failed_form')], 
+                                                 ('name', '=', 'view_bss_lead_phonenumbers_config_failed_form')], 
                                         context=context)
         resource_id = mod_obj.read(cr, uid, model_data_ids, fields=['res_id'], context=context)[0]['res_id']   
         context.update({'failed_ids': failed_ids})
         return {
-            'name': _('Migrate Partner Phone Numbers'),
+            'name': _('Migrate Lead Phone Numbers'),
             'view_type': 'form',
             'view_mode': 'tree',
             'views': [(resource_id,'form')],
-            'res_model': 'bss.partner.phonenumbers.config',
+            'res_model': 'bss.lead.phonenumbers.config',
             'context': context,
             'type': 'ir.actions.act_window',
             'target': 'new',
         }
         
-bluestar_partner_phonenumbers_config()
+bluestar_lead_phonenumbers_config()
 
 
 
