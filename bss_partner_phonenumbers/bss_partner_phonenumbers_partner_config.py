@@ -92,19 +92,31 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
             failed = {}
 
             try:
-                partner['phone'] = phonumbers_converter._parse(partner['phone'], config.country_id.code)
+                pn = phonumbers_converter._parse(partner['phone'], config.country_id.code)
+                if  pn:          
+                    partner['phone'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                else:
+                    partner['phone'] = None
             except phonenumbers.NumberParseException:
                 failed['phone'] = partner['phone']
                 partner['phone'] = None
                 pass  
             try:
-                partner['mobile'] = phonumbers_converter._parse(partner['mobile'], config.country_id.code)
+                pn = phonumbers_converter._parse(partner['mobile'], config.country_id.code)
+                if  pn:          
+                    partner['mobile'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                else:
+                    partner['mobile'] = None
             except phonenumbers.NumberParseException:
                 failed['mobile'] = partner['mobile']
                 partner['mobile'] = None
                 pass
             try:
-                partner['fax'] = phonumbers_converter._parse(partner['fax'], config.country_id.code)
+                pn = phonumbers_converter._parse(partner['fax'], config.country_id.code)
+                if  pn:          
+                    partner['fax'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)  
+                else:
+                    partner['fax'] = None
             except phonenumbers.NumberParseException:
                 failed['fax'] = partner['fax']
                 partner['fax'] = None
@@ -114,7 +126,6 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
                 failed['partner_id'] = partner['id']
                 failed_ids.append(failed_obj.create(cr, uid, failed))
 
-            print str(partner['phone'])
             cr.execute ("""
                 UPDATE res_partner 
                 SET phone = %(phone)s,
