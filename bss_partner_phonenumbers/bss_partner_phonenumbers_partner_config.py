@@ -114,6 +114,7 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
                 failed['partner_id'] = partner['id']
                 failed_ids.append(failed_obj.create(cr, uid, failed))
 
+            print str(partner['phone'])
             cr.execute ("""
                 UPDATE res_partner 
                 SET phone = %(phone)s,
