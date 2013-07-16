@@ -23,6 +23,7 @@
 
 # From this project
 import bss_crm_phonenumbers_lead
+import bss_crm_phonenumbers_lead_config
 
 #import wizard
 #import report
