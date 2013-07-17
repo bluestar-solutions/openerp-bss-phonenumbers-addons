@@ -67,11 +67,17 @@ class bss_phonenumbers_converter(osv.TransientModel):
                 'international': None,
                 'rfc3966': None,
             }   
-        return {
+        res = {
             'e164': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164),
             'international': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.INTERNATIONAL),
             'rfc3966': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.RFC3966),
-        }   
+        }
+        
+        # Format +32XXXXXXXXX Belgian numbers according to test in portal_crm (which will succeed with this format) : 
+        if res['e164'][:3] == '+32' and len(res['e164']) == 12:
+            res['international'] = '%s %s %s %s %s' % (res['e164'][:3], res['e164'][3:6], res['e164'][6:8], 
+                                                       res['e164'][8:10], res['e164'][10:12])
+        return res
 
     def format(self, cr, uid, number, context=None): 
         try:
