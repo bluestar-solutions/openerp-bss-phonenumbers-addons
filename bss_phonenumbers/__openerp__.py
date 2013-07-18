@@ -21,7 +21,7 @@
 
 {
     'name': 'Phone Numbers',
-    'version': '7.0.2.0',
+    'version': 'master',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
