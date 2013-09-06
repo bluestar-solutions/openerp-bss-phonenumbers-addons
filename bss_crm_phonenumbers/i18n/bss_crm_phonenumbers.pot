@@ -7,95 +7,84 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-05 07:50+0000\n"
-"PO-Revision-Date: 2013-09-05 15:22+0200\n"
-"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
+"PO-Revision-Date: 2013-09-05 07:50+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
-"Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1378387359.0\n"
+"Plural-Forms: \n"
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.config,failed_ids:0
 #: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_phonenumbers_failed
 msgid "Failed Phone Numbers"
-msgstr "Numéros de téléphone erronés"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.config,country_id:0
 msgid "Default Country"
-msgstr "Pays par défaut"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "or"
-msgstr "ou"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Every lead numbers successfully converted."
-msgstr "Tous les numéros de téléphone des pistes ont été convertis avec succès."
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.config,success:0
 msgid "Success"
-msgstr "Réussi"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.failed,lead_id:0
 msgid "Lead"
-msgstr "Piste"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.failed,phone:0
 msgid "Phone"
-msgstr "Téléphone"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.failed,mobile:0
 msgid "Mobile"
-msgstr "Téléphone portable"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "The module 'Lead Phone Number' need valid and well-formed phone numbers for                         leads. We will try now to convert phone numbers on existing leads. The numbers                         we cannot convert will be blanked. You can download a CSV file with all the numbers                         we cannot convert at the end of the process."
 msgstr ""
-"Le module 'Numéro de téléphone de la piste' nécessite des numéros de "
-"téléphones valides et correctement formatés. Le processus va maintenant "
-"tenter de convertir les numéros des partenaires existant. Les numéros "
-"impossible à convertir seront supprimés. À la fin de la procédure vous "
-"pourrez télécharger un fichier CSV contenant tous les numéros dont la "
-"conversion a échouée."
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Failed Conversion"
-msgstr "Conversion échouée"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.failed,fax:0
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "You have to specify a default country for helping us to convert numbers without country code."
 msgstr ""
-"Vous devez spécifier une valeur implicite pour le pays afin de permettre la "
-"conversion des numéros sans code national."
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.config,output_file_name:0
 msgid "Filename"
-msgstr "Nom de fichier"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: field:bss.lead.phonenumbers.config,output_file_stream:0
 msgid "Download"
-msgstr "Téléchargement"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: code:addons/bss_crm_phonenumbers/bss_crm_phonenumbers_lead_config.py:143
@@ -103,34 +92,35 @@ msgstr "Téléchargement"
 #: model:ir.actions.act_window,name:bss_crm_phonenumbers.action_bss_lead_phonenumbers_config
 #, python-format
 msgid "Migrate Lead Phone Numbers"
-msgstr "Migration des numéros de téléphone de la piste"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: model:ir.model,name:bss_crm_phonenumbers.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Piste/opportunité"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Apply"
-msgstr "Appliquer"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: view:bss.lead.phonenumbers.config:0
 msgid "Following numbers failed to be converted and have been blanked :"
-msgstr "La conversion des numéros suivant a échouée et ils ont été supprimé :"
+msgstr ""
 
 #. module: bss_crm_phonenumbers
 #: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_phonenumbers_config
 msgid "Lead Phonenumbers Configuration"
-msgstr "Configuration des numéros de téléphone de la piste"
+msgstr ""
+

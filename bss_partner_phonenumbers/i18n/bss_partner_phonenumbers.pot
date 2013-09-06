@@ -7,26 +7,23 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-05 08:03+0000\n"
-"PO-Revision-Date: 2013-09-05 15:13+0200\n"
-"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
+"PO-Revision-Date: 2013-09-05 08:03+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
-"Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1378386836.0\n"
+"Plural-Forms: \n"
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Every partner numbers successfully converted."
-msgstr "Tous les numéros de téléphone ont été convertis avec succès."
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.config,country_id:0
 msgid "Default Country"
-msgstr "Pays implicite"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: code:addons/bss_partner_phonenumbers/bss_partner_phonenumbers_partner_config.py:143
@@ -34,104 +31,97 @@ msgstr "Pays implicite"
 #: model:ir.actions.act_window,name:bss_partner_phonenumbers.action_bss_partner_phonenumbers_config
 #, python-format
 msgid "Migrate Partner Phone Numbers"
-msgstr "Migrer les numéros de téléphone des partenaires"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Failed Conversion"
-msgstr "Conversion échouée"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.config,success:0
 msgid "Success"
-msgstr "Succès"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.config,failed_ids:0
 #: model:ir.model,name:bss_partner_phonenumbers.model_bss_partner_phonenumbers_failed
 msgid "Failed Phone Numbers"
-msgstr "Numéros de téléphone non traités"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.failed,mobile:0
 msgid "Mobile"
-msgstr "Mobile"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.failed,phone:0
 msgid "Phone"
-msgstr "Téléphone"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "You have to specify a default country for helping us to convert numbers without country code."
 msgstr ""
-"Vous devez spécifier une valeur implicite pour le pays afin de permettre la "
-"conversion des numéros sans code national."
 
 #. module: bss_partner_phonenumbers
 #: model:ir.model,name:bss_partner_phonenumbers.model_res_company
 msgid "Companies"
-msgstr "Sociétés"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.failed,fax:0
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.config,output_file_name:0
 msgid "Filename"
-msgstr "Nom de fichier"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.config,output_file_stream:0
 msgid "Download"
-msgstr "Téléchargement"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "The module 'Partner Phone Number' need valid and well-formed phone numbers for                         partners. We will try now to convert phone numbers on existing partners. The numbers                         we cannot convert will be blanked. You can download a CSV file with all the numbers                         we cannot convert at the end of the process."
 msgstr ""
-"Le module 'Numéro de téléphone du partenaire' nécessite des numéros de "
-"téléphones valides et correctement formatés. Le processus va maintenant "
-"tenter de convertir les numéros des partenaires existant. Les numéros "
-"impossible à convertir seront supprimés. À la fin de la procédure vous "
-"pourrez télécharger un fichier CSV contenant tous les numéros dont la "
-"conversion a échouée."
 
 #. module: bss_partner_phonenumbers
 #: field:bss.partner.phonenumbers.failed,partner_id:0
 #: model:ir.model,name:bss_partner_phonenumbers.model_res_partner
 msgid "Partner"
-msgstr "Partenaire"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Apply"
-msgstr "Appliquer"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "Following numbers failed to be converted and have been blanked :"
-msgstr "La conversion des numéros suivant a échouée et ils ont été supprimé :"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: model:ir.model,name:bss_partner_phonenumbers.model_bss_partner_phonenumbers_config
 msgid "Partner Phonenumbers Configuration"
-msgstr "Configuration des numéros de téléphone du partenaire"
+msgstr ""
 
 #. module: bss_partner_phonenumbers
 #: view:bss.partner.phonenumbers.config:0
 msgid "or"
-msgstr "ou"
+msgstr ""
+
