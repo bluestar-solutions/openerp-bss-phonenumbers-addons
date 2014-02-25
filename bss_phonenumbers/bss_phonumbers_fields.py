@@ -43,11 +43,8 @@ class bss_phonenumbers_converter(osv.TransientModel):
         if not number[0] or number[0] == '':
             return None
         
-        try:
-            return phonenumbers.parse(*number)
-        except UnicodeDecodeError:
-            raise osv.except_osv('Error', 'Unauthorized typed characters')
-                
+        return phonenumbers.parse(*number)
+    
     def parse(self, cr, uid, vals, context=None):
         try:
             return bss_phonenumbers_converter._parse(vals)
@@ -106,6 +103,8 @@ class phonenumber(fields.char):
             res = bss_phonenumbers_converter._format(vals)
         except phonenumbers.NumberParseException:
             raise osv.except_osv('Error', 'Invalid phone number for field : %s' % self.string)
+        except UnicodeDecodeError:
+            raise osv.except_osv('Error', 'Invalid characters used for field : %s' % self.string)
         
         return res['e164']
         
