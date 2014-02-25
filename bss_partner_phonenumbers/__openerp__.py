@@ -39,7 +39,6 @@ to use for existing numbers without country code. At the end of the process, the
     'init_xml': [],
     'update_xml': ['bss_partner_phonenumbers_partner_config_view.xml'],
     'demo_xml': [],
-    'test': ['test/test_partner_phonenumbers.yml'],
     'installable': True,
     'application': False,
     'auto_install': False,
