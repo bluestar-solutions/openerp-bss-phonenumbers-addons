@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv
 import unittest2
 import openerp.tests.common as common
  
