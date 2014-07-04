@@ -1,6 +1,6 @@
-openerp.bss_partner_phonenumbers = function(instance) {
+openerp.bss_phonenumbers = function(instance) {
 
-    instance.bss_partner_phonenumbers.FieldPhoneNumber = instance.web.form.FieldChar.extend({
+    instance.bss_phonenumbers.FieldPhoneNumber = instance.web.form.FieldChar.extend({
         template : "FieldPhoneNumber",
         initialize_content: function() {
             this._super();
@@ -34,7 +34,7 @@ openerp.bss_partner_phonenumbers = function(instance) {
         }
     });
     
-    instance.web.form.widgets.add('phonenumber', 'instance.bss_partner_phonenumbers.FieldPhoneNumber');
+    instance.web.form.widgets.add('phonenumber', 'instance.bss_phonenumbers.FieldPhoneNumber');
     
 }
 
