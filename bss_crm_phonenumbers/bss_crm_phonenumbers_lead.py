@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
@@ -15,18 +15,18 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 from openerp.osv import osv
-from openerp.addons.bss_phonenumbers import bss_phonumbers_fields as pnfields #@UnresolvedImport
+from openerp.addons.bss_phonenumbers import bss_phonumbers_fields as pnfields  # @UnresolvedImport
 
 class bss_partner_phonenumbers_partner(osv.osv):
-    
+
     _inherit = 'crm.lead'
     _description = "Bluestar CRM Phonenumbers"
-    
+
     _columns = {
         'phone': pnfields.phonenumber('Phone'),
         'mobile' : pnfields.phonenumber('Mobile'),

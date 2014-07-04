@@ -23,8 +23,8 @@ from openerp.osv import osv
 import unittest2
 import openerp.tests.common as common
 
-from openerp.addons.bss_phonenumbers import bss_phonumbers_fields # @UnresolvedImport
-from phonenumbers import NumberParseException
+from openerp.addons.bss_phonenumbers import bss_phonumbers_fields  # @UnresolvedImport
+
 
 class test_phonenumbers(common.SingleTransactionCase):
 

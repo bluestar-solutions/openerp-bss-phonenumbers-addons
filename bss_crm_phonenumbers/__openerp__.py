@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
@@ -15,7 +15,7 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
@@ -30,7 +30,7 @@ Well formed standard phone numbers in CRM lead form view
 
 This module replaces the phone, fax and mobile text fields of the CRM lead by phonenumber fields from bss_phone_numbers (https://launchpad.net/bss-phonenumbers-addons).
 
-You can use the configuration wizard to convert all existing CRM lead phone numbers after choosing the default country 
+You can use the configuration wizard to convert all existing CRM lead phone numbers after choosing the default country
 to use for existing numbers without country code. At the end of the process, the wizard displays a list of values that could not be interpreted.
     """,
     'author': 'Bluestar Solutions Sàrl',
@@ -43,7 +43,7 @@ to use for existing numbers without country code. At the end of the process, the
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images' : ['images/phonenumber.png',],
+    'images' : ['images/phonenumber.png', ],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
