@@ -133,7 +133,7 @@ class bluestar_partner_phonenumbers_config(osv.osv_memory):
                 pass
             try:
                 pn = phonumbers_converter._parse(
-                    partner['fax'], config.country_id.cod
+                    partner['fax'], config.country_id.code
                 )
                 if pn:
                     partner['fax'] = phonenumbers.format_number(
