@@ -23,7 +23,6 @@ from openerp.osv import osv, fields
 
 
 class bss_partner_multi_phone(osv.osv):
-
     _inherit = 'res.partner'
 
     def _get_phone_field(self, cr, uid, ids, cat_id,
