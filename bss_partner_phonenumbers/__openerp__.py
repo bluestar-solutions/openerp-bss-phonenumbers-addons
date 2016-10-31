@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner Phone Numbers',
-    'version': '7.0.2.1-20150512',
+    'version': '7.0.3.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
