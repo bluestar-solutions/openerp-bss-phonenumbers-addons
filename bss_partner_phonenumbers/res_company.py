@@ -19,23 +19,26 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
-from openerp.addons.bss_phonenumbers import (
-    bss_phonumbers_fields as pnfields  # @UnresolvedImport
-)
+from openerp.osv import osv, fields
+from openerp.addons.base.res.res_company import res_company
 
 
-class bss_partner_phonenumbers_partner(osv.osv):
+class bss_partner_phonenumbers_company(osv.osv):
 
-    _inherit = 'crm.lead'
-    _description = "Bluestar CRM Phonenumbers"
+    _inherit = 'res.company'
+    _description = "Bluestar Company Phonenumbers"
 
     _columns = {
-        'phone': pnfields.phonenumber('Phone'),
-        'mobile': pnfields.phonenumber('Mobile'),
-        'fax': pnfields.phonenumber('Fax'),
+        'phone': fields.function(res_company._get_address_data,
+                                 fnct_inv=res_company._set_address_data,
+                                 size=64, type='phonenumber', string="Phone",
+                                 multi='address'),
+        'fax': fields.function(res_company._get_address_data,
+                               fnct_inv=res_company._set_address_data,
+                               size=64, type='phonenumber', string="Fax",
+                               multi='address'),
     }
 
-bss_partner_phonenumbers_partner()
+bss_partner_phonenumbers_company()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
