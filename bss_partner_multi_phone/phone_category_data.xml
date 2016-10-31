@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+
+		<record id="phone_category_phone" model="bss.phone.category">
+			<field name="name">Phone</field>
+            <field name="required" eval="1" />
+            <field name="unique" eval="0" />
+		</record>
+		<record id="phone_category_fax" model="bss.phone.category">
+			<field name="name">Fax</field>
+            <field name="required" eval="1" />
+            <field name="unique" eval="0" />
+		</record>
+		<record id="phone_category_mobile" model="bss.phone.category">
+			<field name="name">Mobile Phone</field>
+            <field name="required" eval="1" />
+            <field name="unique" eval="0" />
+		</record>
+
+	</data>
+</openerp>
