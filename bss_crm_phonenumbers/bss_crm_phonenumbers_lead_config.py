@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2012-2016 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,9 +21,12 @@
 
 from openerp.osv import osv, fields
 from openerp.tools.translate import _
-from openerp.addons.bss_phonenumbers.bss_phonumbers_fields import bss_phonenumbers_converter as phonumbers_converter  # @UnresolvedImport
+from openerp.addons.bss_phonenumbers.bss_phonumbers_fields import (
+    bss_phonenumbers_converter as phonumbers_converter  # @UnresolvedImport
+)
 import phonenumbers
 import base64
+
 
 class bluestar_lead_phonenumbers_failed(osv.osv_memory):
 
@@ -39,12 +42,12 @@ class bluestar_lead_phonenumbers_failed(osv.osv_memory):
 
 bluestar_lead_phonenumbers_failed()
 
+
 class bluestar_lead_phonenumbers_config(osv.osv_memory):
 
     _name = 'bss.lead.phonenumbers.config'
     _inherit = 'res.config'
     _description = 'Lead Phonenumbers Configuration'
-
 
     def default_get(self, cr, uid, fields, context=None):
         res = dict()
@@ -56,8 +59,12 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
             res['success'] = (len(res['failed_ids']) == 0)
             res['output_file_name'] = 'failed_lead_phone_numbers.csv'
 
-            file_content = '%s,%s,%s,%s' % ('Lead', 'Phone', 'Mobile', 'Fax') + CRLF
-            for failed in failed_obj.browse(cr, uid, res['failed_ids'], context):
+            file_content = '%s,%s,%s,%s' % (
+                'Lead', 'Phone', 'Mobile', 'Fax'
+            ) + CRLF
+            for failed in failed_obj.browse(
+                cr, uid, res['failed_ids'], context
+            ):
                 file_content += '%s,%s,%s,%s' % (failed.lead_id.name,
                                                  failed.phone,
                                                  failed.mobile,
@@ -67,9 +74,12 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
         return res
 
     _columns = {
-        'country_id': fields.many2one('res.country', 'Default Country', required=True),
-        'failed_ids': fields.many2many('bss.lead.phonenumbers.failed', 'bss_lead_phonenumbers_failed_rel',
-                                       'config_id', 'failed_id', 'Failed Phone Numbers', readonly=True),
+        'country_id': fields.many2one('res.country', 'Default Country',
+                                      required=True),
+        'failed_ids': fields.many2many('bss.lead.phonenumbers.failed',
+                                       'bss_lead_phonenumbers_failed_rel',
+                                       'config_id', 'failed_id',
+                                       'Failed Phone Numbers', readonly=True),
         'output_file_stream': fields.binary(string='Download', readonly=True),
         'output_file_name': fields.char('Filename', size=64, readonly=True),
         'success': fields.boolean('Success'),
@@ -83,7 +93,7 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
 
         cr.execute("SELECT id, phone, mobile, fax FROM crm_lead")
         failed_ids = []
-        rows = cr.fetchall ()
+        rows = cr.fetchall()
         for row in rows:
             lead = {'id': row[0],
                     'phone': row[1],
@@ -92,9 +102,13 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
             failed = {}
 
             try:
-                pn = phonumbers_converter._parse(lead['phone'], config.country_id.code)
-                if  pn:
-                    lead['phone'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)
+                pn = phonumbers_converter._parse(
+                    lead['phone'], config.country_id.code
+                )
+                if pn:
+                    lead['phone'] = phonenumbers.format_number(
+                        pn, phonenumbers.PhoneNumberFormat.E164
+                    )
                 else:
                     lead['phone'] = None
             except phonenumbers.NumberParseException:
@@ -102,9 +116,13 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
                 lead['phone'] = None
                 pass
             try:
-                pn = phonumbers_converter._parse(lead['mobile'], config.country_id.code)
-                if  pn:
-                    lead['mobile'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)
+                pn = phonumbers_converter._parse(
+                    lead['mobile'], config.country_id.code
+                )
+                if pn:
+                    lead['mobile'] = phonenumbers.format_number(
+                        pn, phonenumbers.PhoneNumberFormat.E164
+                    )
                 else:
                     lead['mobile'] = None
             except phonenumbers.NumberParseException:
@@ -112,9 +130,13 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
                 lead['mobile'] = None
                 pass
             try:
-                pn = phonumbers_converter._parse(lead['fax'], config.country_id.code)
-                if  pn:
-                    lead['fax'] = phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164)
+                pn = phonumbers_converter._parse(
+                    lead['fax'], config.country_id.code
+                )
+                if pn:
+                    lead['fax'] = phonenumbers.format_number(
+                        pn, phonenumbers.PhoneNumberFormat.E164
+                    )
                 else:
                     lead['fax'] = None
             except phonenumbers.NumberParseException:
@@ -126,7 +148,7 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
                 failed['lead_id'] = lead['id']
                 failed_ids.append(failed_obj.create(cr, uid, failed))
 
-            cr.execute ("""
+            cr.execute("""
                 UPDATE crm_lead
                 SET phone = %(phone)s,
                     mobile = %(mobile)s,
@@ -134,10 +156,12 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
                 WHERE id = %(id)s
             """, lead)
 
-        model_data_ids = mod_obj.search(cr, uid, [('model', '=', 'ir.ui.view'),
-                                                 ('name', '=', 'view_bss_lead_phonenumbers_config_failed_form')],
-                                        context=context)
-        resource_id = mod_obj.read(cr, uid, model_data_ids, fields=['res_id'], context=context)[0]['res_id']
+        model_data_ids = mod_obj.search(cr, uid, [
+            ('model', '=', 'ir.ui.view'),
+            ('name', '=', 'view_bss_lead_phonenumbers_config_failed_form')
+        ], context=context)
+        resource_id = mod_obj.read(cr, uid, model_data_ids, fields=['res_id'],
+                                   context=context)[0]['res_id']
         context.update({'failed_ids': failed_ids})
         return {
             'name': _('Migrate Lead Phone Numbers'),
@@ -152,7 +176,4 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
 
 bluestar_lead_phonenumbers_config()
 
-
-
-
-
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
