@@ -38,7 +38,7 @@ A system administrator can add custom category.
     """,
     'author': u'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
-    'depends': ['bss_phonenumbers'],
+    'depends': ['bss_partner_phonenumbers'],
     'data': ['security/ir.model.access.csv',
              'security/ir_rule.xml',
 

@@ -24,9 +24,7 @@ from openerp.addons.base.res.res_company import res_company
 
 
 class bss_partner_phonenumbers_company(osv.osv):
-
     _inherit = 'res.company'
-    _description = "Bluestar Company Phonenumbers"
 
     _columns = {
         'phone': fields.function(res_company._get_address_data,

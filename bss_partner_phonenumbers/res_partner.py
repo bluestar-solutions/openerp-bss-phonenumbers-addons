@@ -26,9 +26,7 @@ from openerp.addons.bss_phonenumbers import (
 
 
 class bss_partner_phonenumbers_partner(osv.osv):
-
     _inherit = 'res.partner'
-    _description = "Bluestar Partner Phonenumbers"
 
     _columns = {
         'phone': pnfields.phonenumber('Phone'),

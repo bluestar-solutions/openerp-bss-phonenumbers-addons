@@ -23,7 +23,6 @@ from openerp.osv import osv, fields
 
 
 class communication_mode_category(osv.osv):
-
     _name = 'bss.phone.category'
     _description = "Phone Category"
 
