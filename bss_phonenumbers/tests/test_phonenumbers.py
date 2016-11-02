@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2014-2016 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,7 +23,9 @@ from openerp.osv import osv
 import unittest2
 import openerp.tests.common as common
 
-from openerp.addons.bss_phonenumbers import bss_phonumbers_fields  # @UnresolvedImport
+from openerp.addons.bss_phonenumbers import (
+    bss_phonumbers_fields  # @UnresolvedImport
+)
 
 
 class test_phonenumbers(common.SingleTransactionCase):
@@ -57,7 +59,8 @@ class test_phonenumbers(common.SingleTransactionCase):
         res = self.pn._symbol_set_char(number_phone)
         self.assertEqual(res, '+19545551234', 'e164 phone formatting failed')
         res = self.pn._symbol_get(number_phone)
-        self.assertEqual(res, '+1 954-555-1234', 'International phone formatting failed')
+        self.assertEqual(res, '+1 954-555-1234',
+                         'International phone formatting failed')
 
     def test_10_phonenumbers_formatting_fr_CH(self):
         """ I check the phone is correctly formatted for fr_CH. """
@@ -65,7 +68,8 @@ class test_phonenumbers(common.SingleTransactionCase):
         res = self.pn._symbol_set_char(number_phone)
         self.assertEqual(res, '+41411234567', 'e164 phone formatting failed')
         res = self.pn._symbol_get(number_phone)
-        self.assertEqual(res, '+41 41 123 45 67', 'International phone formatting failed')
+        self.assertEqual(res, '+41 41 123 45 67',
+                         'International phone formatting failed')
 
     def test_20_phonenumbers_UnicodeDecodeError(self):
         """ I check invalid characters are detected. """

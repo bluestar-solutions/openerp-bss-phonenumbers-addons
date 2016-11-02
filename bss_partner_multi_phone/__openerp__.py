@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-2016 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,36 +20,37 @@
 ##############################################################################
 
 {
-    'name': 'Partner Phone Numbers',
+    'name': 'Partner Multiple Phone Numbers',
     'version': '7.0.3.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
-Well formed standard phone numbers in partner form view
-=======================================================
+Partner multiple phone numbers
+==============================
 
-This module replaces the phone, fax and mobile text fields of the partner
-by phonenumber fields from bss_phone_numbers
-(https://launchpad.net/bss-phonenumbers-addons).
+With this module, the parter has a dynamic list of phone numbers, with a
+category.
 
-You can use the configuration wizard to convert all existing partner phone
-numbers after choosing the default country
-to use for existing numbers without country code. At the end of the process,
-the wizard displays a list of values that could not be interpreted.
+All existing base field (phone, mobile, fax) are synchronized with
+automatically created category in both directions.
+
+A system administrator can add custom category.
     """,
-    'author': 'Bluestar Solutions Sàrl',
+    'author': u'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
-    'depends': ['base', 'bss_phonenumbers'],
-    'data': [
-        'bss_partner_phonenumbers_partner_config_view.xml',
+    'depends': ['bss_partner_phonenumbers'],
+    'data': ['security/ir.model.access.csv',
+             'security/ir_rule.xml',
 
-        'res_company_view.xml',
-    ],
-    'demo_xml': [],
+             'phone_category_data.xml',
+
+             'phone_category_view.xml',
+             'partner_view.xml', ],
+    'demo': [],
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images': ['images/phonenumber.png', ],
+    'images': [],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

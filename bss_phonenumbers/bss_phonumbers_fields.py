@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2014-2016 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,6 +23,7 @@ from openerp.osv import osv, fields
 from openerp.addons.base.ir.ir_fields import ir_fields_converter
 import phonenumbers
 
+
 class bss_phonenumbers_converter(osv.TransientModel):
 
     _name = 'bss.phonenumbers.converter'
@@ -37,7 +38,7 @@ class bss_phonenumbers_converter(osv.TransientModel):
             number = vals.split(',')
             if len(number) == 1:
                 number = [number[0], region]
-        else :
+        else:
             return None
 
         if not number[0] or number[0] == '':
@@ -68,15 +69,24 @@ class bss_phonenumbers_converter(osv.TransientModel):
                 'rfc3966': None,
             }
         res = {
-            'e164': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.E164),
-            'international': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.INTERNATIONAL),
-            'rfc3966': phonenumbers.format_number(pn, phonenumbers.PhoneNumberFormat.RFC3966),
+            'e164': phonenumbers.format_number(
+                pn, phonenumbers.PhoneNumberFormat.E164
+            ),
+            'international': phonenumbers.format_number(
+                pn, phonenumbers.PhoneNumberFormat.INTERNATIONAL
+            ),
+            'rfc3966': phonenumbers.format_number(
+                pn, phonenumbers.PhoneNumberFormat.RFC3966
+            ),
         }
 
-        # Format +32XXXXXXXXX Belgian numbers according to test in portal_crm (which will succeed with this format) :
+        # Format +32XXXXXXXXX Belgian numbers according to test in portal_crm
+        # (which will succeed with this format) :
         if res['e164'][:3] == '+32' and len(res['e164']) == 12:
-            res['international'] = '%s %s %s %s %s' % (res['e164'][:3], res['e164'][3:6], res['e164'][6:8],
-                                                       res['e164'][8:10], res['e164'][10:12])
+            res['international'] = '%s %s %s %s %s' % (
+                res['e164'][:3], res['e164'][3:6], res['e164'][6:8],
+                res['e164'][8:10], res['e164'][10:12]
+            )
         return res
 
     def format(self, cr, uid, number, context=None):
@@ -91,6 +101,7 @@ class bss_phonenumbers_converter(osv.TransientModel):
 
 bss_phonenumbers_converter()
 
+
 class phonenumber(fields.char):
     _type = 'phonenumber'
 
@@ -103,9 +114,13 @@ class phonenumber(fields.char):
         try:
             res = bss_phonenumbers_converter._format(vals)
         except phonenumbers.NumberParseException:
-            raise osv.except_osv('Error', 'Invalid phone number for field : %s' % self.string)
+            raise osv.except_osv(
+                'Error', 'Invalid phone number for field : %s' % self.string
+            )
         except UnicodeDecodeError:
-            raise osv.except_osv('Error', 'Invalid characters used for field : %s' % self.string)
+            raise osv.except_osv(
+                'Error', 'Invalid characters used for field : %s' % self.string
+            )
 
         return res['e164']
 
@@ -118,10 +133,9 @@ class phonenumber(fields.char):
             result = None
         return result
 
+
 class pn_fields_converter(ir_fields_converter):
     def _str_to_phonenumber(self, cr, uid, model, column, value, context=None):
-        return super(pn_fields_converter, self)._str_to_char(cr, uid, model, column, value, context)
-
-
-
-
+        return super(pn_fields_converter, self)._str_to_char(
+            cr, uid, model, column, value, context
+        )

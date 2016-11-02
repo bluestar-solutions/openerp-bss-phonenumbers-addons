@@ -22,7 +22,8 @@
 # From openerp addons
 
 # From this project
-import bss_partner_phonenumbers_partner
+import res_partner
+import res_company
 import bss_partner_phonenumbers_partner_config
 
 # import wizard

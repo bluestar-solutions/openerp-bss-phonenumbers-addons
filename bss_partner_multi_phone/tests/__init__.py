@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-2016 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,8 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
-from openerp.addons.bss_phonenumbers import (
-    bss_phonumbers_fields as pnfields  # @UnresolvedImport
-)
+import test_partner_multi_phone
 
-
-class bss_partner_phonenumbers_partner(osv.osv):
-
-    _inherit = 'crm.lead'
-    _description = "Bluestar CRM Phonenumbers"
-
-    _columns = {
-        'phone': pnfields.phonenumber('Phone'),
-        'mobile': pnfields.phonenumber('Mobile'),
-        'fax': pnfields.phonenumber('Fax'),
-    }
-
-bss_partner_phonenumbers_partner()
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+checks = [
+    test_partner_multi_phone,
+]
