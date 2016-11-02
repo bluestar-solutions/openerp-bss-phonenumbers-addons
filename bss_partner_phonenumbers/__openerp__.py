@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner Phone Numbers',
-    'version': '7.0.2.1-20150512',
+    'version': '7.0.3.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
@@ -40,8 +40,11 @@ the wizard displays a list of values that could not be interpreted.
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': ['base', 'bss_phonenumbers'],
-    'init_xml': [],
-    'update_xml': ['bss_partner_phonenumbers_partner_config_view.xml'],
+    'data': [
+        'bss_partner_phonenumbers_partner_config_view.xml',
+
+        'res_company_view.xml',
+    ],
     'demo_xml': [],
     'installable': True,
     'application': False,
