@@ -21,7 +21,7 @@
 
 {
     'name': 'CRM Phone Numbers',
-    'version': '7.0.3.0',
+    'version': '7.0.3.1',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
