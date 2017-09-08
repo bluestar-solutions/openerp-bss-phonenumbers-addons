@@ -19,11 +19,11 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
+from odoo.osv import osv
 import unittest2
-import openerp.tests.common as common
+import odoo.tests.common as common
 
-from openerp.addons.bss_phonenumbers import (
+from odoo.addons.bss_phonenumbers import (
     bss_phonumbers_fields  # @UnresolvedImport
 )
 
@@ -90,6 +90,7 @@ class test_phonenumbers(common.SingleTransactionCase):
         number_phone = self.samples[4]
         with self.assertRaises(osv.except_osv):
             self.pn._symbol_set_char(number_phone)
+
 
 if __name__ == '__main__':
     unittest2.main()

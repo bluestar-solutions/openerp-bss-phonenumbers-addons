@@ -19,33 +19,28 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
-from openerp.addons.bss_phonenumbers \
+from odoo import models, fields
+from odoo.addons.bss_phonenumbers \
     import bss_phonumbers_fields as pnfields  # @UnresolvedImport
 
 
-class bss_partner_phone(osv.osv):
+class bss_partner_phone(models.Model):
 
     _name = 'bss.partner.phone'
     _description = 'Partner Phone'
     _rec_name = 'number'
 
-    _columns = {
-        'number': pnfields.phonenumber('Number', required=True),
-        'category_id': fields.many2one('bss.phone.category', 'Category',
-                                       required=True),
-        'partner_id': fields.many2one('res.partner', 'Partner'),
-        'sequence': fields.integer('Sequence', help='Gives the sequence'
-                                   'order when displaying a list of phone'
-                                   'numbers.'),
-    }
+    number = pnfields.Phonenumber('Number', required=True)
+    category_id = fields.Many2one('bss.phone.category', 'Category',
+                                  required=True)
+    partner_id = fields.Many2one('res.partner', 'Partner')
+    sequence = fields.Integer('Sequence', help='Gives the sequence'
+                              'order when displaying a list of phone'
+                              'numbers.', default=10)
 
     _order = "partner_id, sequence"
 
-    _defaults = {
-        'sequence': 10,
-    }
-
+    @api.v7
     def _check_unique(self, cr, uid, ids, context=None):
         for phone in self.browse(cr, uid, ids, context=context):
             if phone.category_id.unique:

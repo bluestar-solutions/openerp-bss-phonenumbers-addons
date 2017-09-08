@@ -19,24 +19,18 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 
-class communication_mode_category(osv.osv):
+class communication_mode_category(models.Model):
     _name = 'bss.phone.category'
     _description = "Phone Category"
 
-    _columns = {
-        'name': fields.char('Name', size=32, translate=True, required=True),
-        'required': fields.boolean('Required', readonly=True),
-        'unique': fields.boolean('Unique', readonly=True),
-    }
+    name = fields.Char('Name', size=32, translate=True, required=True)
+    required = fields.Boolean('Required', readonly=True, default=False)
+    unique = fields.Boolean('Unique', readonly=True, default=False)
 
-    _defaults = {
-        'required': False,
-        'unique': False,
-    }
-
+    @api.v7
     def _get_category_id(self, cr, uid, xml_sub_name):
         """Return the category id from the sub name of an xml id"""
 
@@ -47,13 +41,17 @@ class communication_mode_category(osv.osv):
             'phone_category_%s' % xml_sub_name
         ).id
 
+    @api.v7
     def get_category_phone_id(self, cr, uid):
         return self._get_category_id(cr, uid, 'phone')
 
+    @api.v7
     def get_category_fax_id(self, cr, uid):
         return self._get_category_id(cr, uid, 'fax')
 
+    @api.v7
     def get_category_mobile_id(self, cr, uid):
         return self._get_category_id(cr, uid, 'mobile')
+
 
 communication_mode_category()

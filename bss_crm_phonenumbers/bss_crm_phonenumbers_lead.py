@@ -19,22 +19,21 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
-from openerp.addons.bss_phonenumbers import (
+from odoo import models
+from odoo.addons.bss_phonenumbers import (
     bss_phonumbers_fields as pnfields  # @UnresolvedImport
 )
 
 
-class bss_partner_phonenumbers_partner(osv.osv):
+class bss_partner_phonenumbers_partner(models.Model):
 
     _inherit = 'crm.lead'
     _description = "Bluestar CRM Phonenumbers"
 
-    _columns = {
-        'phone': pnfields.phonenumber('Phone'),
-        'mobile': pnfields.phonenumber('Mobile'),
-        'fax': pnfields.phonenumber('Fax'),
-    }
+    phone = pnfields.Phonenumber('Phone')
+    mobile = pnfields.Phonenumber('Mobile')
+    fax = pnfields.Phonenumber('Fax')
+
 
 bss_partner_phonenumbers_partner()
 

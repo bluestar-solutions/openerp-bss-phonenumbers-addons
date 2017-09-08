@@ -19,23 +19,22 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
-from openerp.addons.base.res.res_company import res_company
+from odoo import models, fields
+from odoo.addons.base.res.res_company import res_company
 
 
-class bss_partner_phonenumbers_company(osv.osv):
+class bss_partner_phonenumbers_company(modles.Model):
     _inherit = 'res.company'
 
-    _columns = {
-        'phone': fields.function(res_company._get_address_data,
-                                 fnct_inv=res_company._set_address_data,
-                                 size=64, type='char', string="Phone",
-                                 multi='address'),
-        'fax': fields.function(res_company._get_address_data,
-                               fnct_inv=res_company._set_address_data,
-                               size=64, type='char', string="Fax",
-                               multi='address'),
-    }
+    phone = fields.Char(compute='res_company._get_address_data',
+                        inverse='res_company._set_address_data',
+                        size=64, string="Phone",
+                        multi='address')
+    fax = fields.Char(compute='res_company._get_address_data',
+                      inverse='res_company._set_address_data',
+                      size=64, string="Fax",
+                      multi='address')
+
 
 bss_partner_phonenumbers_company()
 
