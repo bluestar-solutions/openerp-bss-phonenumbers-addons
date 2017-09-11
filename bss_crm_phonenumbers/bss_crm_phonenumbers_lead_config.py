@@ -19,36 +19,46 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
-from openerp.tools.translate import _
-from openerp.addons.bss_phonenumbers.bss_phonumbers_fields import (
+from odoo import models, fields
+from odoo.tools.translate import _
+from odoo.addons.bss_phonenumbers.bss_phonumbers_fields import (
     bss_phonenumbers_converter as phonumbers_converter  # @UnresolvedImport
 )
 import phonenumbers
 import base64
 
 
-class bluestar_lead_phonenumbers_failed(osv.osv_memory):
+class bluestar_lead_phonenumbers_failed(models.TransientModel):
 
     _name = 'bss.lead.phonenumbers.failed'
     _description = 'Failed Phone Numbers'
 
-    _columns = {
-        'lead_id': fields.many2one('crm.lead', 'Lead', required=True),
-        'phone': fields.char('Phone', size=64),
-        'mobile': fields.char('Mobile', size=64),
-        'fax': fields.char('Fax', size=64),
-    }
+    lead_id = fields.Many2one('crm.lead', 'Lead', required=True)
+    phone = fields.Char('Phone', size=64)
+    mobile = fields.Char('Mobile', size=64)
+    fax = fields.Char('Fax', size=64)
+
 
 bluestar_lead_phonenumbers_failed()
 
 
-class bluestar_lead_phonenumbers_config(osv.osv_memory):
+class bluestar_lead_phonenumbers_config(models.TransientModel):
 
     _name = 'bss.lead.phonenumbers.config'
     _inherit = 'res.config'
     _description = 'Lead Phonenumbers Configuration'
 
+    country_id = fields.Many2one('res.country', 'Default Country',
+                                 required=True)
+    failed_ids = fields.Many2many('bss.lead.phonenumbers.failed',
+                                  'bss_lead_phonenumbers_failed_rel',
+                                  'config_id', 'failed_id',
+                                  'Failed Phone Numbers', readonly=True)
+    output_file_stream = fields.Binary(string='Download', readonly=True)
+    output_file_name = fields.Char('Filename', size=64, readonly=True)
+    success = fields.boolean('Success')
+
+    @api.v7
     def default_get(self, cr, uid, fields, context=None):
         res = dict()
         if context and 'failed_ids' in context:
@@ -73,18 +83,7 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
 
         return res
 
-    _columns = {
-        'country_id': fields.many2one('res.country', 'Default Country',
-                                      required=True),
-        'failed_ids': fields.many2many('bss.lead.phonenumbers.failed',
-                                       'bss_lead_phonenumbers_failed_rel',
-                                       'config_id', 'failed_id',
-                                       'Failed Phone Numbers', readonly=True),
-        'output_file_stream': fields.binary(string='Download', readonly=True),
-        'output_file_name': fields.char('Filename', size=64, readonly=True),
-        'success': fields.boolean('Success'),
-    }
-
+    @api.v7
     def execute(self, cr, uid, ids, context=None):
         mod_obj = self.pool.get('ir.model.data')
         failed_obj = self.pool.get('bss.lead.phonenumbers.failed')
@@ -173,6 +172,7 @@ class bluestar_lead_phonenumbers_config(osv.osv_memory):
             'type': 'ir.actions.act_window',
             'target': 'new',
         }
+
 
 bluestar_lead_phonenumbers_config()
 

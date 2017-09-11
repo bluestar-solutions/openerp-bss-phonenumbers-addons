@@ -20,8 +20,8 @@
 ##############################################################################
 
 import unittest2
-import openerp.tests.common as common
-from openerp.netsvc import logging
+import odoo.tests.common as common
+from odoo.netsvc import logging
 
 
 class test_partner_multi_phone(common.TransactionCase):
@@ -142,6 +142,7 @@ class test_partner_multi_phone(common.TransactionCase):
                              values[self.fax_category_id(cr, uid)][t])
             self.assertEqual(self.luke.mobile,
                              values[self.mobile_category_id(cr, uid)][t])
+
 
 if __name__ == '__main__':
     unittest2.main()

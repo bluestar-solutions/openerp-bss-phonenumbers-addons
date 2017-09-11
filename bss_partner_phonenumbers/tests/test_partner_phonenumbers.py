@@ -20,7 +20,7 @@
 ##############################################################################
 
 import unittest2
-import openerp.tests.common as common
+import odoo.tests.common as common
 
 
 class test_partner_phonenumbers(common.SingleTransactionCase):
@@ -96,6 +96,7 @@ class test_partner_phonenumbers(common.SingleTransactionCase):
         """
         self.assertEqual(self.company_bluestar_solutions.fax,
                          '+41 32 720 08 91', 'Company fax formatting failed')
+
 
 if __name__ == '__main__':
     unittest2.main()

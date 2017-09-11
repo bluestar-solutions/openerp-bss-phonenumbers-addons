@@ -20,7 +20,7 @@
 ##############################################################################
 
 import unittest2
-import openerp.tests.common as common
+import odoo.tests.common as common
 
 
 class test_crm_phonenumbers(common.SingleTransactionCase):
@@ -69,6 +69,7 @@ class test_crm_phonenumbers(common.SingleTransactionCase):
         """
         self.assertEqual(self.lead.fax,
                          '+1 202-268-4871', 'Lead fax formatting failed')
+
 
 if __name__ == '__main__':
     unittest2.main()
