@@ -19,16 +19,15 @@
 #
 ##############################################################################
 
-from odoo import models, fields
-from odoo.addons.base.ir.ir_fields import ir_fields_converter
+from odoo import models, fields, api
+from odoo.osv import osv
+from odoo.addons.base.ir.ir_fields import IrFieldsConverter
 import phonenumbers
 
 
 class bss_phonenumbers_converter(models.TransientModel):
-
     _name = 'bss.phonenumbers.converter'
 
-    @api.v7
     @staticmethod
     def _parse(vals, region=''):
         if isinstance(vals, dict):
@@ -53,7 +52,6 @@ class bss_phonenumbers_converter(models.TransientModel):
         except phonenumbers.NumberParseException:
             return None
 
-    @api.v7
     @staticmethod
     def _format(vals):
         if isinstance(vals, unicode) and vals.startswith('xxx'):
@@ -109,13 +107,14 @@ bss_phonenumbers_converter()
 class Phonenumber(fields.Char):
     _type = 'phonenumber'
 
-    @api.v7
     def __init__(self, string="unknown", **args):
-        fields.char.__init__(self, string=string, size=64, **args)
-        self._symbol_f = self._symbol_set_char = lambda x: self._format_vals(x)
-        self._symbol_set = (super(phonenumber, self)._symbol_c, self._symbol_f)
+        fields.Char.__init__(self, string=string, size=64, **args)
+        # TODO: Does not work in Odoo 10.o
+        # self._symbol_f = self._symbol_set_char = lambda x:
+        #     self._format_vals(x)
+        # self._symbol_set = (super(Phonenumber, self).
+        #     _symbol_c, self._symbol_f)
 
-    @api.v7
     def _format_vals(self, vals):
         try:
             res = bss_phonenumbers_converter._format(vals)
@@ -130,7 +129,6 @@ class Phonenumber(fields.Char):
 
         return res['e164']
 
-    @api.v7
     def _symbol_get(self, number):
         result = {}
         if number:
@@ -141,9 +139,8 @@ class Phonenumber(fields.Char):
         return result
 
 
-class pn_fields_converter(ir_fields_converter):
+class pn_fields_converter(IrFieldsConverter):
 
-    @api.v7
     def _str_to_phonenumber(self, cr, uid, model, column, value, context=None):
         return super(pn_fields_converter, self)._str_to_char(
             cr, uid, model, column, value, context

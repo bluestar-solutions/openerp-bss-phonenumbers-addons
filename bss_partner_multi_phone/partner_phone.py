@@ -19,13 +19,12 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
 from odoo.addons.bss_phonenumbers \
     import bss_phonumbers_fields as pnfields  # @UnresolvedImport
 
 
 class bss_partner_phone(models.Model):
-
     _name = 'bss.partner.phone'
     _description = 'Partner Phone'
     _rec_name = 'number'

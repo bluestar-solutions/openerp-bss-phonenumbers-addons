@@ -26,9 +26,7 @@ from odoo.addons.bss_phonenumbers import (
 
 
 class bss_partner_phonenumbers_partner(models.Model):
-
     _inherit = 'crm.lead'
-    _description = "Bluestar CRM Phonenumbers"
 
     phone = pnfields.Phonenumber('Phone')
     mobile = pnfields.Phonenumber('Mobile')

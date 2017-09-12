@@ -32,7 +32,6 @@ class bss_partner_phonenumbers_partner(models.Model):
     mobile = pnfields.Phonenumber('Mobile')
     fax = pnfields.Phonenumber('Fax')
 
-
 bss_partner_phonenumbers_partner()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
