@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class communication_mode_category(models.Model):

@@ -20,18 +20,17 @@
 ##############################################################################
 
 from odoo import models, fields
-from odoo.addons.base.res.res_company import res_company
 
 
-class bss_partner_phonenumbers_company(modles.Model):
+class bss_partner_phonenumbers_company(models.Model):
     _inherit = 'res.company'
 
-    phone = fields.Char(compute='res_company._get_address_data',
-                        inverse='res_company._set_address_data',
+    phone = fields.Char(compute='_get_address_data',
+                        inverse='_set_address_data',
                         size=64, string="Phone",
                         multi='address')
-    fax = fields.Char(compute='res_company._get_address_data',
-                      inverse='res_company._set_address_data',
+    fax = fields.Char(compute='_get_address_data',
+                      inverse='_set_address_data',
                       size=64, string="Fax",
                       multi='address')
 

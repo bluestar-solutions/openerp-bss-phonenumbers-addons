@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
 from odoo.tools.translate import _
 from odoo.addons.bss_phonenumbers.bss_phonumbers_fields import (
     bss_phonenumbers_converter as phonumbers_converter  # @UnresolvedImport
@@ -29,7 +29,6 @@ import base64
 
 
 class bluestar_lead_phonenumbers_failed(models.TransientModel):
-
     _name = 'bss.lead.phonenumbers.failed'
     _description = 'Failed Phone Numbers'
 
@@ -38,12 +37,10 @@ class bluestar_lead_phonenumbers_failed(models.TransientModel):
     mobile = fields.Char('Mobile', size=64)
     fax = fields.Char('Fax', size=64)
 
-
 bluestar_lead_phonenumbers_failed()
 
 
 class bluestar_lead_phonenumbers_config(models.TransientModel):
-
     _name = 'bss.lead.phonenumbers.config'
     _inherit = 'res.config'
     _description = 'Lead Phonenumbers Configuration'
@@ -56,25 +53,23 @@ class bluestar_lead_phonenumbers_config(models.TransientModel):
                                   'Failed Phone Numbers', readonly=True)
     output_file_stream = fields.Binary(string='Download', readonly=True)
     output_file_name = fields.Char('Filename', size=64, readonly=True)
-    success = fields.boolean('Success')
+    success = fields.Boolean('Success')
 
-    @api.v7
-    def default_get(self, cr, uid, fields, context=None):
+    @api.model
+    def default_get(self):
         res = dict()
-        if context and 'failed_ids' in context:
+        if self.context and 'failed_ids' in self.context:
             CRLF = '\r\n'
-            failed_obj = self.pool.get('bss.lead.phonenumbers.failed')
+            failed_obj = self.env['bss.lead.phonenumbers.failed']
 
-            res['failed_ids'] = context['failed_ids']
+            res['failed_ids'] = self.context['failed_ids']
             res['success'] = (len(res['failed_ids']) == 0)
             res['output_file_name'] = 'failed_lead_phone_numbers.csv'
 
             file_content = '%s,%s,%s,%s' % (
                 'Lead', 'Phone', 'Mobile', 'Fax'
             ) + CRLF
-            for failed in failed_obj.browse(
-                cr, uid, res['failed_ids'], context
-            ):
+            for failed in failed_obj.browse(res['failed_ids']):
                 file_content += '%s,%s,%s,%s' % (failed.lead_id.name,
                                                  failed.phone,
                                                  failed.mobile,
@@ -172,7 +167,6 @@ class bluestar_lead_phonenumbers_config(models.TransientModel):
             'type': 'ir.actions.act_window',
             'target': 'new',
         }
-
 
 bluestar_lead_phonenumbers_config()
 

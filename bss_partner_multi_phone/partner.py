@@ -19,13 +19,21 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class bss_partner_multi_phone(models.Model):
     _inherit = 'res.partner'
 
-    phone_ids = fields.one2many(
+    @api.v7
+    def _get_partner_ids_by_phone_ids(self, cr, uid, ids, context=None):
+        partner_ids = set()
+        for phone in self.browse(cr, uid, ids, context):
+            partner_ids.add(phone.partner_id.id)
+
+        return list(partner_ids)
+
+    phone_ids = fields.One2many(
         'bss.partner.phone', 'partner_id', 'Phones', reorderable=True
     )
     phone = fields.Char(
@@ -155,14 +163,6 @@ class bss_partner_multi_phone(models.Model):
         return self._set_phone_field(cr, uid, ids,
                                      cat_obj.get_category_mobile_id(cr, uid),
                                      name, value, context)
-
-    @api.v7
-    def _get_partner_ids_by_phone_ids(self, cr, uid, ids, context=None):
-        partner_ids = set()
-        for phone in self.browse(cr, uid, ids, context):
-            partner_ids.add(phone.partner_id.id)
-
-        return list(partner_ids)
 
 
 bss_partner_multi_phone()

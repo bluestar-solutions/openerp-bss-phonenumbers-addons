@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <openerp>
   <data>
-  
+
     <record id="rule_required_phone_category" model="ir.rule">
         <field name="name"></field>
-        <field model="ir.model" name="model_id" ref="model_bss_phone_category"/>
+        <field name="model_id" ref="model_bss_phone_category"/>
         <field name="global" eval="True"/>
         <field name="domain_force">[('required', '=', False)]</field>
         <field name="perm_read" eval="0" />
@@ -12,6 +12,6 @@
         <field name="perm_unlink" eval="1" />
         <field name="perm_create" eval="1" />
     </record>
-    
+
   </data>
 </openerp>
