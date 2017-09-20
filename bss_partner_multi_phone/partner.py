@@ -25,14 +25,6 @@ from odoo import models, fields, api
 class bss_partner_multi_phone(models.Model):
     _inherit = 'res.partner'
 
-    @api.v7
-    def _get_partner_ids_by_phone_ids(self, cr, uid, ids, context=None):
-        partner_ids = set()
-        for phone in self.browse(cr, uid, ids, context):
-            partner_ids.add(phone.partner_id.id)
-
-        return list(partner_ids)
-
     phone_ids = fields.One2many(
         'bss.partner.phone', 'partner_id', 'Phones', reorderable=True
     )
@@ -65,6 +57,7 @@ class bss_partner_multi_phone(models.Model):
             for phone in partner.phone_ids:
                 if not found[phone.category_id.id]:
                     setattr(partner, cats[phone.category_id.id], phone.number)
+                    found[phone.category_id.id] = 1
 
     @api.multi
     def _set_phone_numbers(self):
@@ -78,6 +71,7 @@ class bss_partner_multi_phone(models.Model):
             for phone in partner.phone_ids:
                 if not found[phone.category_id.id]:
                     phone.number = getattr(partner, cats[phone.category_id.id])
+                    found[phone.category_id.id] = 1
             for cat_id, f in found.iteritems():
                 if not f:
                     phone_obj.create({
