@@ -37,132 +37,53 @@ class bss_partner_multi_phone(models.Model):
         'bss.partner.phone', 'partner_id', 'Phones', reorderable=True
     )
     phone = fields.Char(
-        compute='_get_phone',
-        inverse='_set_phone',
-        store={
-            'bss.partner.phone': (
-                _get_partner_ids_by_phone_ids,
-                ['number', 'category_id', 'partner_id', 'sequence'], 10
-            ),
-        }, multi=False, string="Phone"
+        compute='_get_phone_numbers',
+        inverse='_set_phone_numbers',
+        store=True, string="Phone"
     )
     fax = fields.Char(
-        compute='_get_fax',
-        inverse='_set_fax',
-        store={
-            'bss.partner.phone': (
-                _get_partner_ids_by_phone_ids,
-                ['number', 'category_id', 'partner_id', 'sequence'], 10
-            ),
-        }, multi=False, string="Fax"
+        compute='_get_phone_numbers',
+        inverse='_set_phone_numbers',
+        store=True, string="Fax"
     )
     mobile = fields.Char(
-        compute='_get_mobile',
-        inverse='_set_mobile',
-        store={
-            'bss.partner.phone': (
-                _get_partner_ids_by_phone_ids,
-                ['number', 'category_id', 'partner_id', 'sequence'], 10
-            ),
-        }, multi=False, string="Mobile"
+        compute='_get_phone_numbers',
+        inverse='_set_phone_numbers',
+        store=True, string="Mobile"
     )
 
-    @api.v7
-    def _get_phone_field(self, cr, uid, ids, cat_id,
-                         field_name, arg, context=None):
-        phone_obj = self.pool.get('bss.partner.phone')
-        result = {}
-        if isinstance(ids, (int, long)):
-            ids = [ids]
+    @api.multi
+    @api.depends('phone_ids.number', 'phone_ids.category_id',
+                 'phone_ids.partner_id', 'phone_ids.sequence')
+    def _get_phone_numbers(self):
+        cat_obj = self.env['bss.phone.category']
+        fields = ['phone', 'fax', 'mobile']
+        found = {cat_obj.get_category_id(f): 0 for f in fields}
+        cats = {cat_obj.get_category_id(f): f for f in fields}
+        for partner in self:
+            found = found.fromkeys(found, 0)
+            for phone in partner.phone_ids:
+                if not found[phone.category_id.id]:
+                    setattr(partner, cats[phone.category_id.id], phone.number)
 
-        # Take the first phone number by sequence for the category if exists:
-        phone_ids = phone_obj.search(
-            cr, uid, [('partner_id', 'in', ids),
-                      ('category_id', '=', cat_id)],
-            order='partner_id asc, sequence asc',
-            context=context
-        )
-        for phone in phone_obj.browse(cr, uid, phone_ids, context):
-            if phone.partner_id.id not in result.keys():
-                result[phone.partner_id.id] = phone.number
-
-        # Fill with None if the phone does not exists:
-        for partner_id in list(set(ids) - set(result.keys())):
-            result[partner_id] = None
-
-        return result
-
-    @api.v7
-    def _set_phone_field(self, cr, uid, ids, cat_id,
-                         name, value, context=None):
-        phone_obj = self.pool.get('bss.partner.phone')
-
-        if not value:
-            return False
-
-        if isinstance(ids, (int, long)):
-            ids = [ids]
-
-        for partner_id in ids:
-            phone_ids = phone_obj.search(
-                cr, uid, [('partner_id', '=', partner_id),
-                          ('category_id', '=', cat_id)],
-                order='partner_id asc, sequence asc',
-                context=context
-            )
-            if phone_ids:
-                phone_obj.write(cr, uid, phone_ids[0], {'number': value},
-                                context)
-            else:
-                phone_obj.create(cr, uid, {
-                    'category_id': cat_id,
-                    'number': value,
-                    'partner_id': partner_id,
-                }, context)
-
-        return True
-
-    @api.v7
-    def _get_phone(self, cr, uid, ids, field_name, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._get_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_phone_id(cr, uid),
-                                     field_name, arg, context)
-
-    @api.v7
-    def _set_phone(self, cr, uid, ids, name, value, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._set_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_phone_id(cr, uid),
-                                     name, value, context)
-
-    @api.v7
-    def _get_fax(self, cr, uid, ids, field_name, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._get_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_fax_id(cr, uid),
-                                     field_name, arg, context)
-
-    @api.v7
-    def _set_fax(self, cr, uid, ids, name, value, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._set_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_fax_id(cr, uid),
-                                     name, value, context)
-
-    @api.v7
-    def _get_mobile(self, cr, uid, ids, field_name, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._get_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_mobile_id(cr, uid),
-                                     field_name, arg, context)
-
-    @api.v7
-    def _set_mobile(self, cr, uid, ids, name, value, arg, context=None):
-        cat_obj = self.pool.get('bss.phone.category')
-        return self._set_phone_field(cr, uid, ids,
-                                     cat_obj.get_category_mobile_id(cr, uid),
-                                     name, value, context)
-
+    @api.multi
+    def _set_phone_numbers(self):
+        phone_obj = self.env['bss.partner.phone']
+        cat_obj = self.env['bss.phone.category']
+        fields = ['phone', 'fax', 'mobile']
+        found = {cat_obj.get_category_id(f): 0 for f in fields}
+        cats = {cat_obj.get_category_id(f): f for f in fields}
+        for partner in self:
+            found = found.fromkeys(found, 0)
+            for phone in partner.phone_ids:
+                if not found[phone.category_id.id]:
+                    phone.number = getattr(partner, cats[phone.category_id.id])
+            for cat_id, f in found.iteritems():
+                if not f:
+                    phone_obj.create({
+                        'category_id': cat_id,
+                        'number': getattr(partner, cats[cat_id]),
+                        'partner_id': partner.id,
+                    })
 
 bss_partner_multi_phone()
