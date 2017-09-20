@@ -73,10 +73,11 @@ class bss_partner_multi_phone(models.Model):
                     phone.number = getattr(partner, cats[phone.category_id.id])
                     found[phone.category_id.id] = 1
             for cat_id, f in found.iteritems():
-                if not f:
+                number = getattr(partner, cats[cat_id])
+                if not f and number:
                     phone_obj.create({
                         'category_id': cat_id,
-                        'number': getattr(partner, cats[cat_id]),
+                        'number': number,
                         'partner_id': partner.id,
                     })
 
