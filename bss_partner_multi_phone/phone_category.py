@@ -30,28 +30,25 @@ class communication_mode_category(models.Model):
     required = fields.Boolean('Required', readonly=True, default=False)
     unique = fields.Boolean('Unique', readonly=True, default=False)
 
-    @api.v7
-    def _get_category_id(self, cr, uid, xml_sub_name):
+    @api.model
+    def get_category_id(self, xml_sub_name):
         """Return the category id from the sub name of an xml id"""
-
-        m = self.pool.get('ir.model.data')
-        return m.get_object(
-            cr, uid,
+        return self.env['ir.model.data'].get_object_reference(
             'bss_partner_multi_phone',
             'phone_category_%s' % xml_sub_name
-        ).id
+        )[1]
 
-    @api.v7
-    def get_category_phone_id(self, cr, uid):
-        return self._get_category_id(cr, uid, 'phone')
+    @api.model
+    def get_category_phone_id(self):
+        return self.get_category_id('phone')
 
-    @api.v7
+    @api.model
     def get_category_fax_id(self, cr, uid):
-        return self._get_category_id(cr, uid, 'fax')
+        return self.get_category_id('fax')
 
-    @api.v7
+    @api.model
     def get_category_mobile_id(self, cr, uid):
-        return self._get_category_id(cr, uid, 'mobile')
+        return self.get_category_id('mobile')
 
 
 communication_mode_category()
