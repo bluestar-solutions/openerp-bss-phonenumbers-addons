@@ -39,14 +39,15 @@ class bss_partner_phone(models.Model):
 
     _order = "partner_id, sequence"
 
-    @api.v7
-    def _check_unique(self, cr, uid, ids, context=None):
-        for phone in self.browse(cr, uid, ids, context=context):
+    @api.multi
+    def _check_unique(self):
+        for phone in self:
             if phone.category_id.unique:
-                cond = [('id', '!=', phone.id),
-                        ('partner_id', '=', phone.partner_id.id),
-                        ('category_id', '=', phone.category_id.id)]
-                if self.search(cr, uid, cond, context=context, count=True):
+                if self.search([
+                    ('id', '!=', phone.id),
+                    ('partner_id', '=', phone.partner_id.id),
+                    ('category_id', '=', phone.category_id.id)
+                ], count=True):
                     return False
             return True
 
