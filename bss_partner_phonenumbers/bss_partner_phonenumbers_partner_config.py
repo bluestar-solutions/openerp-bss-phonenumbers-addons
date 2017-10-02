@@ -37,6 +37,7 @@ class bluestar_partner_phonenumbers_failed(models.TransientModel):
     mobile = fields.Char('Mobile', size=64)
     fax = fields.Char('Fax', size=64)
 
+
 bluestar_partner_phonenumbers_failed()
 
 
@@ -46,13 +47,11 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
     _description = 'Partner Phonenumbers Configuration'
 
     country_id = fields.Many2one(
-        'res.country', 'Default Country', required=True
-    )
+        'res.country', 'Default Country', required=True)
     failed_ids = fields.Many2many(
         'bss.partner.phonenumbers.failed',
         'bss_partner_phonenumbers_failed_rel',
-        'config_id', 'failed_id', 'Failed Phone Numbers', readonly=True
-    )
+        'config_id', 'failed_id', 'Failed Phone Numbers', readonly=True)
     output_file_stream = fields.Binary(string='Download', readonly=True)
     output_file_name = fields.Char('Filename', size=64, readonly=True)
     success = fields.Boolean('Success')
@@ -60,11 +59,11 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
     @api.model
     def default_get(self):
         res = dict()
-        if self.context and 'failed_ids' in self.context:
+        if self._context and 'failed_ids' in self._context:
             CRLF = '\r\n'
             failed_obj = self.env['bss.partner.phonenumbers.failed']
 
-            res['failed_ids'] = self.context['failed_ids']
+            res['failed_ids'] = self._context['failed_ids']
             res['success'] = (len(res['failed_ids']) == 0)
             res['output_file_name'] = 'failed_partner_phone_numbers.csv'
 
@@ -80,16 +79,16 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
 
         return res
 
-    @api.v7
-    def execute(self, cr, uid, ids, context=None):
-        mod_obj = self.pool.get('ir.model.data')
-        failed_obj = self.pool.get('bss.partner.phonenumbers.failed')
+    @api.multi
+    def execute(self):
+        mod_obj = self.env['ir.model.data']
+        failed_obj = self.env['bss.partner.phonenumbers.failed']
 
-        config = self.browse(cr, uid, ids, context)[0]
+        self.ensure_one()
 
-        cr.execute("SELECT id, phone, mobile, fax FROM res_partner")
+        self._cr.execute("SELECT id, phone, mobile, fax FROM res_partner")
         failed_ids = []
-        rows = cr.fetchall()
+        rows = self._cr.fetchall()
         for row in rows:
             partner = {'id': row[0],
                        'phone': row[1],
@@ -99,7 +98,7 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
 
             try:
                 pn = phonumbers_converter._parse(
-                    partner['phone'], config.country_id.code
+                    partner['phone'], self.country_id.code
                 )
                 if pn:
                     partner['phone'] = phonenumbers.format_number(
@@ -113,7 +112,7 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
                 pass
             try:
                 pn = phonumbers_converter._parse(
-                    partner['mobile'], config.country_id.code
+                    partner['mobile'], self.country_id.code
                 )
                 if pn:
                     partner['mobile'] = phonenumbers.format_number(
@@ -127,7 +126,7 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
                 pass
             try:
                 pn = phonumbers_converter._parse(
-                    partner['fax'], config.country_id.code
+                    partner['fax'], self.country_id.code
                 )
                 if pn:
                     partner['fax'] = phonenumbers.format_number(
@@ -142,9 +141,9 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
 
             if failed:
                 failed['partner_id'] = partner['id']
-                failed_ids.append(failed_obj.create(cr, uid, failed))
+                failed_ids.append(failed_obj.create(failed))
 
-            cr.execute("""
+            self._cr.execute("""
                 UPDATE res_partner
                 SET phone = %(phone)s,
                     mobile = %(mobile)s,
@@ -152,23 +151,24 @@ class bluestar_partner_phonenumbers_config(models.TransientModel):
                 WHERE id = %(id)s
             """, partner)
 
-        model_data_ids = mod_obj.search(cr, uid, [
+        model_data = mod_obj.search([
             ('model', '=', 'ir.ui.view'),
             ('name', '=', 'view_bss_partner_phonenumbers_config_failed_form')
-        ], context=context)
-        resource_id = mod_obj.read(cr, uid, model_data_ids, fields=['res_id'],
-                                   context=context)[0]['res_id']
-        context.update({'failed_ids': failed_ids})
+        ])
+        model_data.ensure_one()
+        resource_id = model_data.res_id
+        self._context.update({'failed_ids': failed_ids})
         return {
             'name': _('Migrate Partner Phone Numbers'),
             'view_type': 'form',
             'view_mode': 'tree',
             'views': [(resource_id, 'form')],
             'res_model': 'bss.partner.phonenumbers.config',
-            'context': context,
+            'context': self._context,
             'type': 'ir.actions.act_window',
             'target': 'new',
         }
+
 
 bluestar_partner_phonenumbers_config()
 
