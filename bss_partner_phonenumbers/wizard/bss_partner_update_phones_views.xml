@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Partner Phone Numbers.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <record id="bss_partner_update_phones_form_view" model="ir.ui.view">
+        <field name="name">bss_partner_update_phones.form</field>
+        <field name="model">bss.partner.update_phones</field>
+        <field name="arch" type="xml">
+            <form>
+                <p>The module 'Partner Phone Number' need valid and well-formed phone numbers for
+                   partners. We will try now to convert phone numbers on existing partners. The numbers
+                   we cannot convert will be blanked. You can download a CSV file with all the numbers
+                   we cannot convert at the end of the process."</p>
+                <p>You have to specify a default country for helping us to convert numbers without country code.</p>
+                <group>
+                    <field name="country_id" options="{'no_open': True, 'no_create': True}" />
+                </group>
+                <footer>
+                    <button name="execute" string="Apply" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+     <record id="bss_partner_update_phones_form_view_failed" model="ir.ui.view">
+        <field name="name">bss_partner_update_phones.form.failed</field>
+        <field name="model">bss.partner.update_phones</field>
+        <field name="arch" type="xml">
+            <form>
+                <div attrs="{'invisible': [('failed_ids', '=', [])]}">
+                    <p>Following numbers failed to be converted and have been blanked:</p>
+                    <field name="failed_ids">
+                        <tree string="Failed Conversion">
+                            <field name="partner_id" />
+                            <field name="phone" />
+                            <field name="mobile" />
+                            <field name="fax" />
+                        </tree>
+                    </field>
+                    <field name="output_file_name" invisible="1"/>
+                    <field name="output_file_stream" filename="output_file_name"/>
+                </div>
+                <div attrs="{'invisible': [('failed_ids', '!=', [])]}">
+                    <p>Every partner numbers successfully converted.</p>
+                </div>
+                <footer>
+                    <button string="Close" special="cancel" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="bss_partner_update_phones_action" model="ir.actions.act_window">
+        <field name="name">Update Partner Phones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">bss.partner.update_phones</field>
+        <field name="view_id" ref="bss_partner_update_phones_form_view" />
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="bss_partner_update_phones_action_todo" model="ir.actions.todo">
+        <field name="action_id" ref="bss_partner_update_phones_action"/>
+        <field name="type">automatic</field>
+    </record>
+</odoo>

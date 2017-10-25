@@ -1,0 +1,1158 @@
+  Looking up "https://pypi.python.org/simple/babel/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  Starting new HTTPS connection (1): pypi.python.org
+  "GET /simple/babel/ HTTP/1.1" 200 2510
+  Updating cache with response from "https://pypi.python.org/simple/babel/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/b4/ec/acd307eac2e23f9cab1c8bdbe29b3b1d43215e31c32f8aa91b3a97925b5b/Babel-2.3.4-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684562
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684562
+  Looking up "https://pypi.python.org/simple/decorator/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/decorator/ HTTP/1.1" 200 2351
+  Updating cache with response from "https://pypi.python.org/simple/decorator/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/53/24/cc53f9f216dd5ef269e0af7c7651cbda162554a5b088621a205961c07a6f/decorator-4.0.10-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684561
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684561
+  Looking up "https://pypi.python.org/simple/docutils/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/docutils/ HTTP/1.1" 200 1859
+  Updating cache with response from "https://pypi.python.org/simple/docutils/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/ebaysdk/" in the cache
+  Current age based on date: 169202
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/ebaysdk/ HTTP/1.1" 200 2288
+  Updating cache with response from "https://pypi.python.org/simple/ebaysdk/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/feedparser/" in the cache
+  Current age based on date: 169202
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/feedparser/ HTTP/1.1" 200 1995
+  Updating cache with response from "https://pypi.python.org/simple/feedparser/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/gevent/" in the cache
+  Current age based on date: 169202
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/gevent/ HTTP/1.1" 200 31106
+  Updating cache with response from "https://pypi.python.org/simple/gevent/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/1a/23/0fec5ea162012f935613c2bec362e31f5695cb35e812cf4c21b835784098/gevent-1.1.2-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 5684559
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684559
+  Looking up "https://pypi.python.org/simple/greenlet/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/greenlet/ HTTP/1.1" 200 24008
+  Updating cache with response from "https://pypi.python.org/simple/greenlet/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/fd/4b/108108a5a4234b2c7f81a7e9513950caf5146c9b2d47664348dbe9aebaf8/greenlet-0.4.10-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 5684559
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684559
+  Looking up "https://pypi.python.org/simple/jcconv/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/jcconv/ HTTP/1.1" 200 1354
+  Updating cache with response from "https://pypi.python.org/simple/jcconv/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/jinja2/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/jinja2/ HTTP/1.1" 200 3949
+  Updating cache with response from "https://pypi.python.org/simple/jinja2/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/96/a1/c56bc4d99dc2663514a8481511e80eba8994133ae75eebdadfc91a5597d9/Jinja2-2.8-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684558
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684558
+  Looking up "https://pypi.python.org/simple/lxml/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/lxml/ HTTP/1.1" 200 67823
+  Updating cache with response from "https://pypi.python.org/simple/lxml/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/mako/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/mako/ HTTP/1.1" 200 3422
+  Updating cache with response from "https://pypi.python.org/simple/mako/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/markupsafe/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/markupsafe/ HTTP/1.1" 200 1415
+  Updating cache with response from "https://pypi.python.org/simple/markupsafe/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/mock/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/mock/ HTTP/1.1" 200 3360
+  Updating cache with response from "https://pypi.python.org/simple/mock/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684556
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684556
+  Looking up "https://pypi.python.org/simple/ofxparse/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/ofxparse/ HTTP/1.1" 200 4022
+  Updating cache with response from "https://pypi.python.org/simple/ofxparse/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/passlib/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/passlib/ HTTP/1.1" 200 3492
+  Updating cache with response from "https://pypi.python.org/simple/passlib/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/2d/a7/1a3363e5d531d438267a79d43d4b8d224655adef489e98fc96678fe16ed1/passlib-1.6.5-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684555
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684555
+  Looking up "https://pypi.python.org/simple/pillow/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pillow/ HTTP/1.1" 200 95133
+  Updating cache with response from "https://pypi.python.org/simple/pillow/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/f5/cc/6ed6df9eb1cbe0153e0897a62b6e72560faef13fa4891c143a965374ac4a/Pillow-3.4.1-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 5684556
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684556
+  Looking up "https://pypi.python.org/simple/psutil/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psutil/ HTTP/1.1" 200 57420
+  Updating cache with response from "https://pypi.python.org/simple/psutil/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/psycogreen/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psycogreen/ HTTP/1.1" 200 310
+  Updating cache with response from "https://pypi.python.org/simple/psycogreen/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/psycopg2/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psycopg2/ HTTP/1.1" 200 15005
+  Updating cache with response from "https://pypi.python.org/simple/psycopg2/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/6a/84/7289d6c2b26943b5d1e2e67dde3961babd62df8c742b243bc7c6bfc35230/psycopg2-2.7.1-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 5684553
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684553
+  Looking up "https://pypi.python.org/simple/pydot/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pydot/ HTTP/1.1" 200 664
+  Updating cache with response from "https://pypi.python.org/simple/pydot/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyparsing/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyparsing/ HTTP/1.1" 200 15037
+  Updating cache with response from "https://pypi.python.org/simple/pyparsing/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/2b/f7/e5a178fc3ea4118a0edce2a8d51fc14e680c745cf4162e4285b437c43c94/pyparsing-2.1.10-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684553
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684553
+  Looking up "https://pypi.python.org/simple/pypdf/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pypdf/ HTTP/1.1" 200 850
+  Updating cache with response from "https://pypi.python.org/simple/pypdf/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyserial/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyserial/ HTTP/1.1" 200 2102
+  Updating cache with response from "https://pypi.python.org/simple/pyserial/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/49/db/5704dfc92d9a35f43d10744b0e661eeb1cbddc3bf8bd704592d653d23d86/pyserial-3.1.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684553
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684553
+  Looking up "https://pypi.python.org/simple/python-chart/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-chart/ HTTP/1.1" 200 238
+  Updating cache with response from "https://pypi.python.org/simple/python-chart/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/python-dateutil/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-dateutil/ HTTP/1.1" 200 2465
+  Updating cache with response from "https://pypi.python.org/simple/python-dateutil/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/33/68/9eadc96f9899caebd98f55f942d6a8f3fb2b8f8e69ba81a0f771269897e9/python_dateutil-2.5.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684552
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684552
+  Looking up "https://pypi.python.org/simple/python-ldap/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-ldap/ HTTP/1.1" 200 10221
+  Updating cache with response from "https://pypi.python.org/simple/python-ldap/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/python-openid/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-openid/ HTTP/1.1" 200 453
+  Updating cache with response from "https://pypi.python.org/simple/python-openid/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pytz/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pytz/ HTTP/1.1" 200 46650
+  Updating cache with response from "https://pypi.python.org/simple/pytz/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/79/b5/3ebe5bda3fc7280cebb65d70a03d0e52b23b776aba8c51895df6d23f0678/pytz-2016.7-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684552
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684552
+  Looking up "https://pypi.python.org/simple/pyusb/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyusb/ HTTP/1.1" 200 806
+  Updating cache with response from "https://pypi.python.org/simple/pyusb/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyyaml/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyyaml/ HTTP/1.1" 200 2770
+  Updating cache with response from "https://pypi.python.org/simple/pyyaml/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/qrcode/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/qrcode/ HTTP/1.1" 200 2286
+  Updating cache with response from "https://pypi.python.org/simple/qrcode/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/39/71/c01d42a3fc1a9c768c93980f26159ec682dc7bd49407e756f671b52b8344/qrcode-5.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 19415334
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 19415334
+  Looking up "https://pypi.python.org/simple/reportlab/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/reportlab/ HTTP/1.1" 200 7107
+  Updating cache with response from "https://pypi.python.org/simple/reportlab/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/requests/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/requests/ HTTP/1.1" 200 12886
+  Updating cache with response from "https://pypi.python.org/simple/requests/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/ea/03/92d3278bf8287c5caa07dbd9ea139027d5a3592b0f4d14abf072f890fab2/requests-2.11.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684549
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684549
+  Looking up "https://pypi.python.org/simple/six/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/six/ HTTP/1.1" 200 2699
+  Updating cache with response from "https://pypi.python.org/simple/six/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/c8/0a/b6723e1bc4c516cb687841499455a8505b44607ab535be01091c0f24f079/six-1.10.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 19415336
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 19415336
+  Looking up "https://pypi.python.org/simple/suds-jurko/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/suds-jurko/ HTTP/1.1" 200 1139
+  Updating cache with response from "https://pypi.python.org/simple/suds-jurko/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/vatnumber/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/vatnumber/ HTTP/1.1" 200 443
+  Updating cache with response from "https://pypi.python.org/simple/vatnumber/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/vobject/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/vobject/ HTTP/1.1" 200 2560
+  Updating cache with response from "https://pypi.python.org/simple/vobject/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/werkzeug/" in the cache
+  Current age based on date: 169201
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/werkzeug/ HTTP/1.1" 200 5726
+  Updating cache with response from "https://pypi.python.org/simple/werkzeug/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/a9/5e/41f791a3f380ec50f2c4c3ef1399d9ffce6b4fe9a7f305222f014cf4fe83/Werkzeug-0.11.11-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684549
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684549
+Looking up "https://pypi.python.org/simple/wsgiref/" in the cache
+Current age based on date: 331697
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/wsgiref/ HTTP/1.1" 200 792
+Updating cache with response from "https://pypi.python.org/simple/wsgiref/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/xlsxwriter/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlsxwriter/ HTTP/1.1" 200 10496
+  Updating cache with response from "https://pypi.python.org/simple/xlsxwriter/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/c2/47/7d513298de3fb900ebed5143f159c13555dcef3e7615187d29cde004333e/XlsxWriter-0.9.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684549
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684549
+  Looking up "https://pypi.python.org/simple/xlwt/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlwt/ HTTP/1.1" 200 1884
+  Updating cache with response from "https://pypi.python.org/simple/xlwt/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/05/90/e9a256ae4689a8daf73635e7761a8f9ece0a78fcf9af87bb9ef017e5bd85/xlwt-1.1.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684548
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684548
+  Looking up "https://pypi.python.org/simple/xlrd/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlrd/ HTTP/1.1" 200 2586
+  Updating cache with response from "https://pypi.python.org/simple/xlrd/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/watchdog/" in the cache
+  Current age based on date: 169200
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/watchdog/ HTTP/1.1" 200 993
+  Updating cache with response from "https://pypi.python.org/simple/watchdog/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/phonenumbers/" in the cache
+  Current age based on date: 695716
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/phonenumbers/ HTTP/1.1" 200 9209
+  Updating cache with response from "https://pypi.python.org/simple/phonenumbers/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/4e/cf/40c425b4a83a0a595a079b561a5c4ff9d4e622aeba33b97874abcbb47769/phonenumbers-8.8.4-py2.py3-none-any.whl" in the cache
+  No cache entry available
+  "GET /packages/4e/cf/40c425b4a83a0a595a079b561a5c4ff9d4e622aeba33b97874abcbb47769/phonenumbers-8.8.4-py2.py3-none-any.whl HTTP/1.1" 200 2703337
+  Updating cache with response from "https://pypi.python.org/packages/4e/cf/40c425b4a83a0a595a079b561a5c4ff9d4e622aeba33b97874abcbb47769/phonenumbers-8.8.4-py2.py3-none-any.whl"
+  Caching due to etag
+  Looking up "https://pypi.python.org/simple/funcsigs/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/funcsigs/ HTTP/1.1" 200 952
+  Updating cache with response from "https://pypi.python.org/simple/funcsigs/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684550
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684550
+  Looking up "https://pypi.python.org/simple/pbr/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pbr/ HTTP/1.1" 200 6751
+  Updating cache with response from "https://pypi.python.org/simple/pbr/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/0c/5d/b077dbf309993d52c1d71e6bf6fe443a8029ea215135ebbe0b1b10e7aefc/pbr-3.1.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5684550
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684550
+  Looking up "https://pypi.python.org/simple/beautifulsoup4/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/beautifulsoup4/ HTTP/1.1" 200 2574
+  Updating cache with response from "https://pypi.python.org/simple/beautifulsoup4/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/a6/29/bcbd41a916ad3faf517780a0af7d0254e8d6722ff6414723eedba4334531/beautifulsoup4-4.6.0-py2-none-any.whl" in the cache
+  Current age based on date: 5684550
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5684550
+Looking up "https://pypi.python.org/simple/setuptools/" in the cache
+Current age based on date: 169148
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/setuptools/ HTTP/1.1" 200 61458
+Updating cache with response from "https://pypi.python.org/simple/setuptools/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/setuptools/" in the cache
+  Current age based on date: 1
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The response is "fresh", returning cached response
+  600 > 1
+  Looking up "https://pypi.python.org/packages/bd/4c/b06ab3abfc8bc93b87b70f4cab22352c3c72deba7b71390d14bfffa97c85/setuptools-36.6.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 589364
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 589364
+Looking up "https://pypi.python.org/simple/pip/" in the cache
+Current age based on date: 169148
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/pip/ HTTP/1.1" 200 6868
+Updating cache with response from "https://pypi.python.org/simple/pip/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pip/" in the cache
+  Current age based on date: 0
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The response is "fresh", returning cached response
+  600 > 0
+  Looking up "https://pypi.python.org/packages/b6/ac/7015eb97dc749283ffdec1c3a88ddb8ae03b8fad0f0e611408f196358da3/pip-9.0.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 17111270
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 17111270
+  Looking up "https://pypi.python.org/simple/python-stdnum/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-stdnum/ HTTP/1.1" 200 1411
+  Updating cache with response from "https://pypi.python.org/simple/python-stdnum/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/argh/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/argh/ HTTP/1.1" 200 3318
+  Updating cache with response from "https://pypi.python.org/simple/argh/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/06/1c/e667a7126f0b84aaa1c56844337bf0ac12445d1beb9c8a6199a7314944bf/argh-0.26.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 5618564
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 5618564
+  Looking up "https://pypi.python.org/simple/pathtools/" in the cache
+  Current age based on date: 169203
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pathtools/ HTTP/1.1" 200 374
+  Updating cache with response from "https://pypi.python.org/simple/pathtools/"
+  Caching b/c date exists and max-age > 0
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/pybabel to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/mako-render to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/pbr to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/easy_install to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/easy_install-2.7 to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/qr to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/pip to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/pip2 to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/pip2.7 to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/change_tz to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/ics_diff to 775
+  changing mode of /var/oebuild/bss-partner-addons/venv/bin/watchmedo to 775
+Looking up "https://pypi.python.org/pypi/pip/json" in the cache
+Current age based on date: 169159
+Freshness lifetime from max-age: 600
+The cached response is "stale" with no etag, purging
+Starting new HTTPS connection (1): pypi.python.org
+"GET /pypi/pip/json HTTP/1.1" 200 72983
+Updating cache with response from "https://pypi.python.org/pypi/pip/json"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/babel/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  Starting new HTTPS connection (1): pypi.python.org
+  "GET /simple/babel/ HTTP/1.1" 200 2510
+  Updating cache with response from "https://pypi.python.org/simple/babel/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/b4/ec/acd307eac2e23f9cab1c8bdbe29b3b1d43215e31c32f8aa91b3a97925b5b/Babel-2.3.4-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131706
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131706
+  Looking up "https://pypi.python.org/simple/decorator/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/decorator/ HTTP/1.1" 200 2351
+  Updating cache with response from "https://pypi.python.org/simple/decorator/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/53/24/cc53f9f216dd5ef269e0af7c7651cbda162554a5b088621a205961c07a6f/decorator-4.0.10-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131704
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131704
+  Looking up "https://pypi.python.org/simple/docutils/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/docutils/ HTTP/1.1" 200 1859
+  Updating cache with response from "https://pypi.python.org/simple/docutils/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/ebaysdk/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/ebaysdk/ HTTP/1.1" 200 2288
+  Updating cache with response from "https://pypi.python.org/simple/ebaysdk/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/feedparser/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/feedparser/ HTTP/1.1" 200 1995
+  Updating cache with response from "https://pypi.python.org/simple/feedparser/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/gevent/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/gevent/ HTTP/1.1" 200 31106
+  Updating cache with response from "https://pypi.python.org/simple/gevent/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/1a/23/0fec5ea162012f935613c2bec362e31f5695cb35e812cf4c21b835784098/gevent-1.1.2-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 6131702
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131702
+  Looking up "https://pypi.python.org/simple/greenlet/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/greenlet/ HTTP/1.1" 200 24008
+  Updating cache with response from "https://pypi.python.org/simple/greenlet/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/fd/4b/108108a5a4234b2c7f81a7e9513950caf5146c9b2d47664348dbe9aebaf8/greenlet-0.4.10-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 6131702
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131702
+  Looking up "https://pypi.python.org/simple/jcconv/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/jcconv/ HTTP/1.1" 200 1354
+  Updating cache with response from "https://pypi.python.org/simple/jcconv/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/jinja2/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/jinja2/ HTTP/1.1" 200 3949
+  Updating cache with response from "https://pypi.python.org/simple/jinja2/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/96/a1/c56bc4d99dc2663514a8481511e80eba8994133ae75eebdadfc91a5597d9/Jinja2-2.8-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131701
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131701
+  Looking up "https://pypi.python.org/simple/lxml/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/lxml/ HTTP/1.1" 200 67823
+  Updating cache with response from "https://pypi.python.org/simple/lxml/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/mako/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/mako/ HTTP/1.1" 200 3422
+  Updating cache with response from "https://pypi.python.org/simple/mako/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/markupsafe/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/markupsafe/ HTTP/1.1" 200 1415
+  Updating cache with response from "https://pypi.python.org/simple/markupsafe/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/mock/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/mock/ HTTP/1.1" 200 3360
+  Updating cache with response from "https://pypi.python.org/simple/mock/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131699
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131699
+  Looking up "https://pypi.python.org/simple/ofxparse/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/ofxparse/ HTTP/1.1" 200 4022
+  Updating cache with response from "https://pypi.python.org/simple/ofxparse/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/passlib/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/passlib/ HTTP/1.1" 200 3492
+  Updating cache with response from "https://pypi.python.org/simple/passlib/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/2d/a7/1a3363e5d531d438267a79d43d4b8d224655adef489e98fc96678fe16ed1/passlib-1.6.5-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131698
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131698
+  Looking up "https://pypi.python.org/simple/pillow/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pillow/ HTTP/1.1" 200 95133
+  Updating cache with response from "https://pypi.python.org/simple/pillow/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/f5/cc/6ed6df9eb1cbe0153e0897a62b6e72560faef13fa4891c143a965374ac4a/Pillow-3.4.1-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 6131699
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131699
+  Looking up "https://pypi.python.org/simple/psutil/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psutil/ HTTP/1.1" 200 57420
+  Updating cache with response from "https://pypi.python.org/simple/psutil/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/psycogreen/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psycogreen/ HTTP/1.1" 200 310
+  Updating cache with response from "https://pypi.python.org/simple/psycogreen/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/psycopg2/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/psycopg2/ HTTP/1.1" 200 17188
+  Updating cache with response from "https://pypi.python.org/simple/psycopg2/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/6a/84/7289d6c2b26943b5d1e2e67dde3961babd62df8c742b243bc7c6bfc35230/psycopg2-2.7.1-cp27-cp27mu-manylinux1_x86_64.whl" in the cache
+  Current age based on date: 6131696
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131696
+  Looking up "https://pypi.python.org/simple/pydot/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pydot/ HTTP/1.1" 200 664
+  Updating cache with response from "https://pypi.python.org/simple/pydot/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyparsing/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyparsing/ HTTP/1.1" 200 15037
+  Updating cache with response from "https://pypi.python.org/simple/pyparsing/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/2b/f7/e5a178fc3ea4118a0edce2a8d51fc14e680c745cf4162e4285b437c43c94/pyparsing-2.1.10-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131695
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131695
+  Looking up "https://pypi.python.org/simple/pypdf/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pypdf/ HTTP/1.1" 200 850
+  Updating cache with response from "https://pypi.python.org/simple/pypdf/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyserial/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyserial/ HTTP/1.1" 200 2102
+  Updating cache with response from "https://pypi.python.org/simple/pyserial/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/49/db/5704dfc92d9a35f43d10744b0e661eeb1cbddc3bf8bd704592d653d23d86/pyserial-3.1.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131696
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131696
+  Looking up "https://pypi.python.org/simple/python-chart/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-chart/ HTTP/1.1" 200 238
+  Updating cache with response from "https://pypi.python.org/simple/python-chart/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/python-dateutil/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-dateutil/ HTTP/1.1" 200 7126
+  Updating cache with response from "https://pypi.python.org/simple/python-dateutil/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/33/68/9eadc96f9899caebd98f55f942d6a8f3fb2b8f8e69ba81a0f771269897e9/python_dateutil-2.5.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131695
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131695
+  Looking up "https://pypi.python.org/simple/python-ldap/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-ldap/ HTTP/1.1" 200 10221
+  Updating cache with response from "https://pypi.python.org/simple/python-ldap/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/python-openid/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-openid/ HTTP/1.1" 200 453
+  Updating cache with response from "https://pypi.python.org/simple/python-openid/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pytz/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pytz/ HTTP/1.1" 200 46650
+  Updating cache with response from "https://pypi.python.org/simple/pytz/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/79/b5/3ebe5bda3fc7280cebb65d70a03d0e52b23b776aba8c51895df6d23f0678/pytz-2016.7-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131694
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131694
+  Looking up "https://pypi.python.org/simple/pyusb/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyusb/ HTTP/1.1" 200 806
+  Updating cache with response from "https://pypi.python.org/simple/pyusb/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pyyaml/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pyyaml/ HTTP/1.1" 200 2770
+  Updating cache with response from "https://pypi.python.org/simple/pyyaml/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/qrcode/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/qrcode/ HTTP/1.1" 200 2286
+  Updating cache with response from "https://pypi.python.org/simple/qrcode/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/39/71/c01d42a3fc1a9c768c93980f26159ec682dc7bd49407e756f671b52b8344/qrcode-5.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 19862476
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 19862476
+  Looking up "https://pypi.python.org/simple/reportlab/" in the cache
+  Current age based on date: 107908
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/reportlab/ HTTP/1.1" 200 7107
+  Updating cache with response from "https://pypi.python.org/simple/reportlab/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/requests/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/requests/ HTTP/1.1" 200 12886
+  Updating cache with response from "https://pypi.python.org/simple/requests/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/ea/03/92d3278bf8287c5caa07dbd9ea139027d5a3592b0f4d14abf072f890fab2/requests-2.11.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131692
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131692
+  Looking up "https://pypi.python.org/simple/six/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/six/ HTTP/1.1" 200 2699
+  Updating cache with response from "https://pypi.python.org/simple/six/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/c8/0a/b6723e1bc4c516cb687841499455a8505b44607ab535be01091c0f24f079/six-1.10.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 19862479
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 19862479
+  Looking up "https://pypi.python.org/simple/suds-jurko/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/suds-jurko/ HTTP/1.1" 200 1139
+  Updating cache with response from "https://pypi.python.org/simple/suds-jurko/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/vatnumber/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/vatnumber/ HTTP/1.1" 200 443
+  Updating cache with response from "https://pypi.python.org/simple/vatnumber/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/vobject/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/vobject/ HTTP/1.1" 200 2560
+  Updating cache with response from "https://pypi.python.org/simple/vobject/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/werkzeug/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/werkzeug/ HTTP/1.1" 200 5726
+  Updating cache with response from "https://pypi.python.org/simple/werkzeug/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/a9/5e/41f791a3f380ec50f2c4c3ef1399d9ffce6b4fe9a7f305222f014cf4fe83/Werkzeug-0.11.11-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131691
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131691
+Looking up "https://pypi.python.org/simple/wsgiref/" in the cache
+Current age based on date: 107909
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/wsgiref/ HTTP/1.1" 200 792
+Updating cache with response from "https://pypi.python.org/simple/wsgiref/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/xlsxwriter/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlsxwriter/ HTTP/1.1" 200 10496
+  Updating cache with response from "https://pypi.python.org/simple/xlsxwriter/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/c2/47/7d513298de3fb900ebed5143f159c13555dcef3e7615187d29cde004333e/XlsxWriter-0.9.3-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131691
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131691
+  Looking up "https://pypi.python.org/simple/xlwt/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlwt/ HTTP/1.1" 200 1884
+  Updating cache with response from "https://pypi.python.org/simple/xlwt/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/05/90/e9a256ae4689a8daf73635e7761a8f9ece0a78fcf9af87bb9ef017e5bd85/xlwt-1.1.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131691
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131691
+  Looking up "https://pypi.python.org/simple/xlrd/" in the cache
+  Current age based on date: 107910
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/xlrd/ HTTP/1.1" 200 2586
+  Updating cache with response from "https://pypi.python.org/simple/xlrd/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/watchdog/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/watchdog/ HTTP/1.1" 200 993
+  Updating cache with response from "https://pypi.python.org/simple/watchdog/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/phonenumbers/" in the cache
+  Current age based on date: 447143
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/phonenumbers/ HTTP/1.1" 200 9209
+  Updating cache with response from "https://pypi.python.org/simple/phonenumbers/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/4e/cf/40c425b4a83a0a595a079b561a5c4ff9d4e622aeba33b97874abcbb47769/phonenumbers-8.8.4-py2.py3-none-any.whl" in the cache
+  Current age based on date: 447142
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 447142
+  Looking up "https://pypi.python.org/simple/funcsigs/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/funcsigs/ HTTP/1.1" 200 952
+  Updating cache with response from "https://pypi.python.org/simple/funcsigs/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131690
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131690
+  Looking up "https://pypi.python.org/simple/pbr/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pbr/ HTTP/1.1" 200 6751
+  Updating cache with response from "https://pypi.python.org/simple/pbr/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/0c/5d/b077dbf309993d52c1d71e6bf6fe443a8029ea215135ebbe0b1b10e7aefc/pbr-3.1.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6131690
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131690
+  Looking up "https://pypi.python.org/simple/beautifulsoup4/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/beautifulsoup4/ HTTP/1.1" 200 2574
+  Updating cache with response from "https://pypi.python.org/simple/beautifulsoup4/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/a6/29/bcbd41a916ad3faf517780a0af7d0254e8d6722ff6414723eedba4334531/beautifulsoup4-4.6.0-py2-none-any.whl" in the cache
+  Current age based on date: 6131690
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6131690
+Looking up "https://pypi.python.org/simple/setuptools/" in the cache
+Current age based on date: 107909
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/setuptools/ HTTP/1.1" 200 61458
+Updating cache with response from "https://pypi.python.org/simple/setuptools/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/setuptools/" in the cache
+  Current age based on date: 1
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The response is "fresh", returning cached response
+  600 > 1
+  Looking up "https://pypi.python.org/packages/bd/4c/b06ab3abfc8bc93b87b70f4cab22352c3c72deba7b71390d14bfffa97c85/setuptools-36.6.0-py2.py3-none-any.whl" in the cache
+  Current age based on date: 1036504
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 1036504
+Looking up "https://pypi.python.org/simple/pip/" in the cache
+Current age based on date: 107910
+Freshness lifetime from max-age: 600
+Freshness lifetime from request max-age: 600
+The cached response is "stale" with no etag, purging
+"GET /simple/pip/ HTTP/1.1" 200 6868
+Updating cache with response from "https://pypi.python.org/simple/pip/"
+Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/pip/" in the cache
+  Current age based on date: 0
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The response is "fresh", returning cached response
+  600 > 0
+  Looking up "https://pypi.python.org/packages/b6/ac/7015eb97dc749283ffdec1c3a88ddb8ae03b8fad0f0e611408f196358da3/pip-9.0.1-py2.py3-none-any.whl" in the cache
+  Current age based on date: 17558410
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 17558410
+  Looking up "https://pypi.python.org/simple/python-stdnum/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/python-stdnum/ HTTP/1.1" 200 1411
+  Updating cache with response from "https://pypi.python.org/simple/python-stdnum/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/simple/argh/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/argh/ HTTP/1.1" 200 3318
+  Updating cache with response from "https://pypi.python.org/simple/argh/"
+  Caching b/c date exists and max-age > 0
+  Looking up "https://pypi.python.org/packages/06/1c/e667a7126f0b84aaa1c56844337bf0ac12445d1beb9c8a6199a7314944bf/argh-0.26.2-py2.py3-none-any.whl" in the cache
+  Current age based on date: 6065704
+  Freshness lifetime from max-age: 31557600
+  The response is "fresh", returning cached response
+  31557600 > 6065704
+  Looking up "https://pypi.python.org/simple/pathtools/" in the cache
+  Current age based on date: 107909
+  Freshness lifetime from max-age: 600
+  Freshness lifetime from request max-age: 600
+  The cached response is "stale" with no etag, purging
+  "GET /simple/pathtools/ HTTP/1.1" 200 374
+  Updating cache with response from "https://pypi.python.org/simple/pathtools/"
+  Caching b/c date exists and max-age > 0
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/pybabel to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/mako-render to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/pbr to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/easy_install to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/easy_install-2.7 to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/qr to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/pip to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/pip2 to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/pip2.7 to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/change_tz to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/ics_diff to 775
+  changing mode of /var/oebuild/bss-phonenumbers-addons/venv/bin/watchmedo to 775
+Looking up "https://pypi.python.org/pypi/pip/json" in the cache
+Current age based on date: 107912
+Freshness lifetime from max-age: 600
+The cached response is "stale" with no etag, purging
+Starting new HTTPS connection (1): pypi.python.org
+"GET /pypi/pip/json HTTP/1.1" 200 72983
+Updating cache with response from "https://pypi.python.org/pypi/pip/json"
+Caching b/c date exists and max-age > 0

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Partner Multiple Phone Numbers.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <record id="bss_phone_category_form_view" model="ir.ui.view">
+        <field name="name">bss.phone.category.form</field>
+        <field name="model">bss.phone.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Partner Multiple Phone Numbers.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <record id="view_partner_form_inherit_bss_partner_multi_phone" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.bss_partner_multi_phone</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="phone" position="replace"></field>
+            <field name="mobile" position="replace"></field>
+            <field name="fax" position="replace"></field>
+            <xpath expr="//group/group[1]" position="after">
+                <group string="Phones" cols="1">
+                    <field name="phone_ids" nolabel="1" widget="one2many_action">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="category_id"/>
+                            <field name="number" widget="phone"/>
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
