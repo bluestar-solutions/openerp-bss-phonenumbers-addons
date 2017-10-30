@@ -16,11 +16,14 @@ class Partner(models.Model):
     phone_ids = fields.One2many(
         'bss.partner.phone', 'partner_id', "Phones", reorderable=True)
     phone = pnfields.Phone(
-        "Phone", compute='_get_phone_numbers', inverse='_set_phone')
+        "Phone", compute='_get_phone_numbers', inverse='_set_dummy',
+        store=True)
     fax = pnfields.Phone(
-        "Fax", compute='_get_phone_numbers', inverse='_set_fax')
+        "Fax", compute='_get_phone_numbers', inverse='_set_dummy',
+        store=True)
     mobile = pnfields.Phone(
-        "Mobile", compute='_get_phone_numbers', inverse='_set_mobile')
+        "Mobile", compute='_get_phone_numbers', inverse='_set_dummy',
+        store=True)
 
     @api.multi
     @api.depends('phone_ids.number', 'phone_ids.category_id',
@@ -37,12 +40,44 @@ class Partner(models.Model):
                     found[phone.category_id.id] = 1
 
     @api.multi
-    def _set_phone_numbers(self, field):
+    def _set_dummy(self):
+        pass
+
+    @api.model
+    def create(self, vals):
+        phone_vals = self._extract_phone_vals(vals)
+        res = super(Partner, self).create(vals)
+        res._set_phone_vals(phone_vals)
+        return res
+
+    @api.multi
+    def write(self, vals):
+        self._logger.warn(vals)
+        phone_vals = self._extract_phone_vals(vals)
+        super(Partner, self).write(vals)
+        self._set_phone_vals(phone_vals)
+        return True
+
+    def _extract_phone_vals(self, vals):
+        if 'phone_ids' in vals:
+            return {}
+        phone_vals = {}
+        for field in ['phone', 'fax', 'mobile']:
+            if field in vals:
+                phone_vals[field] = vals.pop(field)
+        return phone_vals
+
+    @api.multi
+    def _set_phone_vals(self, phone_vals):
+        for field, value in phone_vals.iteritems():
+            self._set_phone_numbers(field, value)
+
+    @api.multi
+    def _set_phone_numbers(self, field, value):
         cat_obj = self.env['bss.phone.category']
         phone_obj = self.env['bss.partner.phone']
         category_id = cat_obj.get_category_id(field)
         for partner in self:
-            value = getattr(partner, field)
             found = False
             for phone in partner.phone_ids:
                 if phone.category_id.id == category_id:

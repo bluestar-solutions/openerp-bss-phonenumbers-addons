@@ -4,23 +4,23 @@
     See LICENSE file for full copyright and licensing details.
 -->
 <openerp>
-	<data noupdate="1">
+    <data noupdate="1">
 
-		<record id="phone_category_phone" model="bss.phone.category">
-			<field name="name">Phone</field>
+        <record id="phone_category_phone" model="bss.phone.category">
+            <field name="name">Phone</field>
             <field name="required" eval="1" />
             <field name="unique" eval="0" />
-		</record>
-		<record id="phone_category_fax" model="bss.phone.category">
-			<field name="name">Fax</field>
+        </record>
+        <record id="phone_category_fax" model="bss.phone.category">
+            <field name="name">Fax</field>
             <field name="required" eval="1" />
             <field name="unique" eval="0" />
-		</record>
-		<record id="phone_category_mobile" model="bss.phone.category">
-			<field name="name">Mobile Phone</field>
+        </record>
+        <record id="phone_category_mobile" model="bss.phone.category">
+            <field name="name">Mobile Phone</field>
             <field name="required" eval="1" />
             <field name="unique" eval="0" />
-		</record>
+        </record>
 
-	</data>
+    </data>
 </openerp>
