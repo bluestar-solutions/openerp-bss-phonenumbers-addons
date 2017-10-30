@@ -2,6 +2,7 @@
 # Part of Partner Multiple Phone Numbers.
 # See LICENSE file for full copyright and licensing details.
 
+import logging
 from odoo import models, fields, api
 from odoo.addons.bss_phonenumbers import (
     fields as pnfields  # @UnresolvedImport
@@ -10,18 +11,16 @@ from odoo.addons.bss_phonenumbers import (
 
 class Partner(models.Model):
     _inherit = 'res.partner'
+    _logger = logging.getLogger(_inherit)
 
     phone_ids = fields.One2many(
         'bss.partner.phone', 'partner_id', "Phones", reorderable=True)
     phone = pnfields.Phone(
-        "Phone", compute='_get_phone_numbers', inverse='_set_phone_numbers',
-        store=True)
+        "Phone", compute='_get_phone_numbers', inverse='_set_phone')
     fax = pnfields.Phone(
-        "Fax", compute='_get_phone_numbers', inverse='_set_phone_numbers',
-        store=True)
+        "Fax", compute='_get_phone_numbers', inverse='_set_fax')
     mobile = pnfields.Phone(
-        "Mobile", compute='_get_phone_numbers', inverse='_set_phone_numbers',
-        store=True)
+        "Mobile", compute='_get_phone_numbers', inverse='_set_mobile')
 
     @api.multi
     @api.depends('phone_ids.number', 'phone_ids.category_id',
@@ -29,33 +28,46 @@ class Partner(models.Model):
     def _get_phone_numbers(self):
         cat_obj = self.env['bss.phone.category']
         fields = ['phone', 'fax', 'mobile']
-        found = {cat_obj.get_category_id(f): 0 for f in fields}
         cats = {cat_obj.get_category_id(f): f for f in fields}
         for partner in self:
-            found = found.fromkeys(found, 0)
+            found = dict.fromkeys(cats, 0)
             for phone in partner.phone_ids:
                 if not found[phone.category_id.id]:
                     setattr(partner, cats[phone.category_id.id], phone.number)
                     found[phone.category_id.id] = 1
 
     @api.multi
-    def _set_phone_numbers(self):
-        phone_obj = self.env['bss.partner.phone']
+    def _set_phone_numbers(self, field):
         cat_obj = self.env['bss.phone.category']
-        fields = ['phone', 'fax', 'mobile']
-        found = {cat_obj.get_category_id(f): 0 for f in fields}
-        cats = {cat_obj.get_category_id(f): f for f in fields}
+        phone_obj = self.env['bss.partner.phone']
+        category_id = cat_obj.get_category_id(field)
         for partner in self:
-            found = found.fromkeys(found, 0)
+            value = getattr(partner, field)
+            found = False
             for phone in partner.phone_ids:
-                if not found[phone.category_id.id]:
-                    phone.number = getattr(partner, cats[phone.category_id.id])
-                    found[phone.category_id.id] = 1
-            for cat_id, f in found.iteritems():
-                number = getattr(partner, cats[cat_id])
-                if not f and number:
+                if phone.category_id.id == category_id:
+                    found = True
+                    if value:
+                        phone.number = value
+                    else:
+                        phone.unlink()
+                    break
+            if not found and value:
+                if value:
                     phone_obj.create({
-                        'category_id': cat_id,
-                        'number': number,
                         'partner_id': partner.id,
+                        'category_id': category_id,
+                        'number': value,
                     })
+
+    @api.multi
+    def _set_phone(self):
+        self._set_phone_numbers('phone')
+
+    @api.multi
+    def _set_fax(self):
+        self._set_phone_numbers('fax')
+
+    @api.multi
+    def _set_mobile(self):
+        self._set_phone_numbers('mobile')

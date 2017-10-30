@@ -37,13 +37,7 @@ class Base(models.AbstractModel):
             if country:
                 country_code = country.code.upper()
             if vals.get(field):
-                value = vals[field]
-                if not isinstance(vals[field], basestring):
-                    value = value[0]
-                if value:
-                    pn = phonenumbers.parse(value, country_code)
-                    vals[field] = phonenumbers.format_number(
-                        pn, phonenumbers.PhoneNumberFormat.E164)
-                else:
-                    vals[field] = None
+                pn = phonenumbers.parse(vals[field], country_code)
+                vals[field] = phonenumbers.format_number(
+                    pn, phonenumbers.PhoneNumberFormat.E164)
         return vals

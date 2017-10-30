@@ -9,9 +9,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <field name="phone" position="replace"></field>
-            <field name="mobile" position="replace"></field>
-            <field name="fax" position="replace"></field>
+<!--             <field name="phone" position="replace"></field> -->
+<!--             <field name="mobile" position="replace"></field> -->
+<!--             <field name="fax" position="replace"></field> -->
             <xpath expr="//group/group[1]" position="after">
                 <group string="Phones" cols="1">
                     <field name="phone_ids" nolabel="1" widget="one2many_action">

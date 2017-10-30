@@ -6,6 +6,7 @@
 <odoo>
     <template id="assets_backend" name="bss_phonenumbers assets" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
+            <script type="text/javascript" src="/bss_phonenumbers/static/src/js/libphonenumber-8-8-4.min.js"></script>
             <script type="text/javascript" src="/bss_phonenumbers/static/src/js/phone_widget.js"></script>
         </xpath>
     </template>
