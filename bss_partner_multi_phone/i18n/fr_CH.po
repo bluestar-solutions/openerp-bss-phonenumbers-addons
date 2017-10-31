@@ -1,12 +1,12 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * bss_partner_multi_phone
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 09:53+0000\n"
-"PO-Revision-Date: 2016-04-26 09:54+0200\n"
+"POT-Creation-Date: 2017-10-25 14:21+0000\n"
+"PO-Revision-Date: 2017-10-25 15:00+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
@@ -15,32 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1461660895.0\n"
-
-#. module: bss_partner_multi_phone
-#: field:bss.partner.phone,category_id:0
-msgid "Category"
-msgstr "Catégorie"
-
-#. module: bss_partner_multi_phone
-#: help:bss.partner.phone,sequence:0
-msgid "Gives the sequenceorder when displaying a list of phonenumbers."
-msgstr "Détermine l'ordre d'affichage des numéro de téléphone."
-
-#. module: bss_partner_multi_phone
-#: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_fax
-msgid "Fax"
-msgstr "Fax"
-
-#. module: bss_partner_multi_phone
-#: field:bss.phone.category,required:0
-msgid "Required"
-msgstr "Requis"
-
-#. module: bss_partner_multi_phone
-#: field:bss.phone.category,name:0
-msgid "Name"
-msgstr "Nom"
+"X-POOTLE-MTIME: 1508940025.0\n"
 
 #. module: bss_partner_multi_phone
 #: constraint:bss.partner.phone:0
@@ -49,31 +24,61 @@ msgstr ""
 "Une catégorie unique ne peut être utilisée qu'une seule fois par partenaire"
 
 #. module: bss_partner_multi_phone
-#: view:res.partner:0
-#: field:res.partner,phone_ids:0
-msgid "Phones"
-msgstr "Téléphones"
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_category_id
+msgid "Category"
+msgstr "Catégorie"
 
 #. module: bss_partner_multi_phone
-#: view:bss.phone.category:0
-#: model:ir.model,name:bss_partner_multi_phone.model_bss_phone_category
-msgid "Phone Category"
-msgstr "Catégorie de téléphone"
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_create_uid
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_create_uid
+msgid "Created by"
+msgstr "Créé par"
 
 #. module: bss_partner_multi_phone
-#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
-msgid "Partner Phone"
-msgstr "Téléphone de partenaire"
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_create_date
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_create_date
+msgid "Created on"
+msgstr "Créé le"
 
 #. module: bss_partner_multi_phone
-#: field:bss.partner.phone,number:0
-msgid "Number"
-msgstr "Numéro"
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_display_name
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
 
 #. module: bss_partner_multi_phone
-#: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_phone
-msgid "Phone"
-msgstr "Téléphone"
+#: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,help:bss_partner_multi_phone.field_bss_partner_phone_sequence
+msgid "Gives the sequenceorder when displaying a list of phonenumbers."
+msgstr "Détermine l'ordre d'affichage des numéro de téléphone."
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_id
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone___last_update
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_write_uid
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_write_date
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
 
 #. module: bss_partner_multi_phone
 #: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_mobile
@@ -81,21 +86,54 @@ msgid "Mobile Phone"
 msgstr "Téléphone mobile"
 
 #. module: bss_partner_multi_phone
-#: field:bss.partner.phone,sequence:0
-msgid "Sequence"
-msgstr "Séquence"
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_name
+msgid "Name"
+msgstr "Nom"
 
 #. module: bss_partner_multi_phone
-#: field:bss.partner.phone,partner_id:0
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_number
+msgid "Number"
+msgstr "Numéro"
+
+#. module: bss_partner_multi_phone
 #: model:ir.model,name:bss_partner_multi_phone.model_res_partner
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_partner_id
 msgid "Partner"
 msgstr "Partenaire"
 
 #. module: bss_partner_multi_phone
-#: field:bss.phone.category,unique:0
+#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
+msgid "Partner Phone"
+msgstr "Téléphone de partenaire"
+
+#. module: bss_partner_multi_phone
+#: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model,name:bss_partner_multi_phone.model_bss_phone_category
+msgid "Phone Category"
+msgstr "Catégorie de téléphone"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_res_partner_phone_ids
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_res_users_phone_ids
+#: model:ir.ui.view,arch_db:bss_partner_multi_phone.view_partner_form_inherit_bss_partner_multi_phone
+msgid "Phones"
+msgstr "Téléphones"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_required
+msgid "Required"
+msgstr "Requis"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_partner_phone_sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: bss_partner_multi_phone
+#: model:ir.model.fields,field_description:bss_partner_multi_phone.field_bss_phone_category_unique
 msgid "Unique"
 msgstr "Unique"
-
-#~ msgid "A required category cannot be used multiple times on a partner"
-#~ msgstr ""
-#~ "Une catégorie requise ne peut être utilisée qu'une seule fois par partenaire"

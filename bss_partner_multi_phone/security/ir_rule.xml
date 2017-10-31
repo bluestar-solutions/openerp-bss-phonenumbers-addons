@@ -1,6 +1,9 @@
-<?xml version="1.0"?>
-<openerp>
-  <data>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Partner Multiple Phone Numbers.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
 
     <record id="rule_required_phone_category" model="ir.rule">
         <field name="name"></field>
@@ -13,5 +16,4 @@
         <field name="perm_create" eval="1" />
     </record>
 
-  </data>
-</openerp>
+</odoo>

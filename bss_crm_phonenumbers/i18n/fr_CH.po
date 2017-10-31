@@ -1,109 +1,134 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 #	* bss_crm_phonenumbers
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-05 07:50+0000\n"
-"PO-Revision-Date: 2013-09-05 15:22+0200\n"
+"POT-Creation-Date: 2017-10-25 14:21+0000\n"
+"PO-Revision-Date: 2017-10-25 14:47+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
-"Language-Team: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1378387359.0\n"
+"X-POOTLE-MTIME: 1508939260.0\n"
 
 #. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.config,failed_ids:0
-#: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_phonenumbers_failed
-msgid "Failed Phone Numbers"
-msgstr "Numéros de téléphone erronés"
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view
+msgid "Apply"
+msgstr "Appliquer"
 
 #. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.config,country_id:0
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view_failed
+msgid "Close"
+msgstr "Fermer"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_create_uid
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_create_date
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_country_id
 msgid "Default Country"
 msgstr "Pays par défaut"
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "or"
-msgstr "ou"
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_display_name
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Every lead numbers successfully converted."
-msgstr "Tous les numéros de téléphone des pistes ont été convertis avec succès."
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.config,success:0
-msgid "Success"
-msgstr "Réussi"
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.failed,lead_id:0
-msgid "Lead"
-msgstr "Piste"
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.failed,phone:0
-msgid "Phone"
-msgstr "Téléphone"
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.failed,mobile:0
-msgid "Mobile"
-msgstr "Téléphone portable"
-
-#. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "The module 'Lead Phone Number' need valid and well-formed phone numbers for                         leads. We will try now to convert phone numbers on existing leads. The numbers                         we cannot convert will be blanked. You can download a CSV file with all the numbers                         we cannot convert at the end of the process."
-msgstr ""
-"Le module 'Numéro de téléphone de la piste' nécessite des numéros de "
-"téléphones valides et correctement formatés. Le processus va maintenant "
-"tenter de convertir les numéros des partenaires existant. Les numéros "
-"impossible à convertir seront supprimés. À la fin de la procédure vous "
-"pourrez télécharger un fichier CSV contenant tous les numéros dont la "
-"conversion a échouée."
-
-#. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Failed Conversion"
-msgstr "Conversion échouée"
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.failed,fax:0
-msgid "Fax"
-msgstr "Fax"
-
-#. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "You have to specify a default country for helping us to convert numbers without country code."
-msgstr ""
-"Vous devez spécifier une valeur implicite pour le pays afin de permettre la "
-"conversion des numéros sans code national."
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.config,output_file_name:0
-msgid "Filename"
-msgstr "Nom de fichier"
-
-#. module: bss_crm_phonenumbers
-#: field:bss.lead.phonenumbers.config,output_file_stream:0
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_output_file_stream
 msgid "Download"
 msgstr "Téléchargement"
 
 #. module: bss_crm_phonenumbers
-#: code:addons/bss_crm_phonenumbers/bss_crm_phonenumbers_lead_config.py:143
-#: view:bss.lead.phonenumbers.config:0
-#: model:ir.actions.act_window,name:bss_crm_phonenumbers.action_bss_lead_phonenumbers_config
-#, python-format
-msgid "Migrate Lead Phone Numbers"
-msgstr "Migration des numéros de téléphone de la piste"
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_failed_ids
+msgid "Errors"
+msgstr "Erreurs"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view_failed
+msgid "Every lead numbers successfully converted."
+msgstr "Tous les numéros de téléphone des pistes ont été convertis avec succès."
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view_failed
+msgid "Failed Conversion"
+msgstr "Conversion échouée"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_update_phones_error
+msgid "Failed Phone Numbers"
+msgstr "Numéros de téléphone non traités"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_output_file_name
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view_failed
+msgid "Following numbers failed to be converted and have been blanked:"
+msgstr "Les numéros suivants n'ont pas pu être convertis et ont été effacé :"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_id
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones___last_update
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_write_uid
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_write_date
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_lead_id
+msgid "Lead"
+msgstr "Piste"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_update_phones
+msgid "Lead Update Phones"
+msgstr "Mise à jour des numéros des pistes"
 
 #. module: bss_crm_phonenumbers
 #: model:ir.model,name:bss_crm_phonenumbers.model_crm_lead
@@ -111,26 +136,50 @@ msgid "Lead/Opportunity"
 msgstr "Piste/opportunité"
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Close"
-msgstr "Fermer"
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_mobile
+msgid "Mobile"
+msgstr "Mobile"
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Cancel"
-msgstr "Annuler"
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_phone
+msgid "Phone"
+msgstr "Téléphone"
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Apply"
-msgstr "Appliquer"
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view
+msgid "The module 'CRM Phone Number' need valid and well-formed phone numbers for\n"
+"                   leads. We will try now to convert phone numbers on existing partners. The numbers\n"
+"                   we cannot convert will be blanked. You can download a CSV file with all the numbers\n"
+"                   we cannot convert at the end of the process.\""
+msgstr ""
+"Le module 'Numéros de téléphone pour CRM' nécessite des numéros de téléphone "
+"valides et bien formés.\n"
+"Nous allons essayer de convertir les numéros des pistes existantes. Les "
+"numéros\n"
+"impossible à traiter seront effacés. Vous pourrez télécharger un fichier CSV "
+"contenant tous les\n"
+"numéros impossible à convertir à la fin du processus."
 
 #. module: bss_crm_phonenumbers
-#: view:bss.lead.phonenumbers.config:0
-msgid "Following numbers failed to be converted and have been blanked :"
-msgstr "La conversion des numéros suivant a échouée et ils ont été supprimé :"
+#: code:addons/bss_crm_phonenumbers/wizard/bss_lead_update_phones.py:109
+#: model:ir.actions.act_window,name:bss_crm_phonenumbers.bss_lead_update_phones_action
+#, python-format
+msgid "Update Lead Phones"
+msgstr "Mise à jour des numéros des pistes"
 
 #. module: bss_crm_phonenumbers
-#: model:ir.model,name:bss_crm_phonenumbers.model_bss_lead_phonenumbers_config
-msgid "Lead Phonenumbers Configuration"
-msgstr "Configuration des numéros de téléphone de la piste"
+#: model:ir.model.fields,field_description:bss_crm_phonenumbers.field_bss_lead_update_phones_error_wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view
+msgid "You have to specify a default country for helping us to convert numbers without country code."
+msgstr ""
+"Vous devez spécifier une valeur implicite pour le pays afin de permettre la "
+"conversion des numéros sans code national."
+
+#. module: bss_crm_phonenumbers
+#: model:ir.ui.view,arch_db:bss_crm_phonenumbers.bss_lead_update_phones_form_view
+msgid "or"
+msgstr "ou"
