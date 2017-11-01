@@ -9,6 +9,5 @@ from odoo.addons.bss_phonenumbers import fields  # @UnresolvedImport
 class PartnerQualifiedContactRel(models.Model):
     _inherit = 'bss.partner.qualified_contact.rel'
 
-    phone = fields.Phone("Phone", related='contact_id.phone', readonly=True)
-    mobile = fields.Phone(
-        string="Mobile", related='contact_id.mobile', readonly=True)
+    phone = fields.Phone("Phone", compute='_compute_phones')
+    mobile = fields.Phone("Mobile", compute='_compute_phones')
