@@ -11,4 +11,4 @@ class BssPhonenumbersController(http.Controller):
     def country_code(self):
         user = http.request.env.user  # @UndefinedVariable
         country = user.company_id.country_id
-        return country and country.code or ''
+        return country and country.code or None
