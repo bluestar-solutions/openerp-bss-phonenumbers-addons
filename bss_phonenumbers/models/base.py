@@ -34,6 +34,7 @@ class Base(models.AbstractModel):
         pn_fields = self._get_phonenumber_fields()
         for field in pn_fields:
             country = self.env.user.company_id.country_id
+            country_code = None
             if country:
                 country_code = country.code.upper()
             if vals.get(field):
