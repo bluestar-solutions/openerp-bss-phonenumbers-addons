@@ -115,7 +115,6 @@ class Partner(models.Model):
             "//field[@name='street']/ancestor::group[1]")
         email_nodes = doc.xpath(
             "//field[@name='email']/ancestor::group[1]/*")
-        self._logger.warn(len(address_nodes))
         if address_nodes and email_nodes:
             for node in email_nodes:
                 address_nodes[0].append(node)
