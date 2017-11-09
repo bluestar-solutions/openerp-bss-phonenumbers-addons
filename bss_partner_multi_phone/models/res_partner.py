@@ -3,7 +3,8 @@
 # See LICENSE file for full copyright and licensing details.
 
 import logging
-from odoo import models, fields, api
+from lxml import etree
+from odoo import api, fields, models
 from odoo.addons.bss_phonenumbers import (
     fields as pnfields  # @UnresolvedImport
 )
@@ -106,3 +107,25 @@ class Partner(models.Model):
     @api.multi
     def _set_mobile(self):
         self._set_phone_numbers('mobile')
+
+    @api.model
+    def fields_view_multi_phone(self, arch):
+        doc = etree.fromstring(arch)
+        address_nodes = doc.xpath(
+            "//field[@name='street']/ancestor::group[1]")
+        email_nodes = doc.xpath(
+            "//field[@name='email']/ancestor::group[1]/*")
+        if address_nodes and email_nodes:
+            for node in email_nodes:
+                address_nodes[0].append(node)
+        return etree.tostring(doc)
+
+    @api.model
+    def fields_view_get(self, view_id=None, view_type='form', toolbar=False,
+                        submenu=False):
+        res = super(Partner, self).fields_view_get(
+            view_id=view_id, view_type=view_type, toolbar=toolbar,
+            submenu=submenu)
+        if view_type == 'form':
+            res['arch'] = self.fields_view_multi_phone(res['arch'])
+        return res
