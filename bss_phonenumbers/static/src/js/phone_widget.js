@@ -50,8 +50,12 @@ odoo.define('bss_phonenumbers.phone_widget', function (require) {
         is_syntax_valid: function() {
             if (this.$input && this.$input.val()) {
                 try {
-                    var number = pnu.parse(
-                            this.$input.val(), this._country_code);
+                    if (this._country_code) {
+                        var number = pnu.parse(
+                                this.$input.val(), this._country_code);
+                    } else {
+                        var number = pnu.parse(this.$input.val());
+                    }
                     // Disable validation (only formatting)
                     //return pnu.isPossibleNumber(number) &&
                     //        pnu.isValidNumber(number);
