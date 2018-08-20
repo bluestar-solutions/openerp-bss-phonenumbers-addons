@@ -36,7 +36,8 @@ class Partner(models.Model):
         for partner in self:
             found = dict.fromkeys(cats, 0)
             for phone in partner.phone_ids:
-                if not found[phone.category_id.id]:
+                if phone.category_id.id in found and \
+                        not found[phone.category_id.id]:
                     setattr(partner, cats[phone.category_id.id], phone.number)
                     found[phone.category_id.id] = 1
 
