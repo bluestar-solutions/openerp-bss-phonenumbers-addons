@@ -1,12 +1,11 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* bss_partner_phonenumbers
-#
+# * bss_partner_phonenumbers
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 14:21+0000\n"
+"POT-Creation-Date: 2018-09-15 09:39+0000\n"
 "PO-Revision-Date: 2017-10-25 14:38+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,7 +152,7 @@ msgid "The module 'Partner Phone Number' need valid and well-formed phone number
 "                   we cannot convert will be blanked. You can download a CSV file with all the numbers\n"
 "                   we cannot convert at the end of the process.\""
 msgstr ""
-"Le module 'Numéros de téléphone des partenaires' nécessite des numéros de "
+"Le module 'Numéros de téléphone des partenaires' nécéssite des numéros de "
 "téléphone valides et bien formés.\n"
 "Nous allons essayer de convertir les numéros des partenaires existants. Les "
 "numéros\n"
