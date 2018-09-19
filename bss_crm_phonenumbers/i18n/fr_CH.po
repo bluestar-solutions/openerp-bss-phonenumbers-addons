@@ -1,12 +1,11 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* bss_crm_phonenumbers
-#
+# * bss_crm_phonenumbers
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-25 14:21+0000\n"
+"POT-Creation-Date: 2018-09-15 09:39+0000\n"
 "PO-Revision-Date: 2017-10-25 14:47+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
