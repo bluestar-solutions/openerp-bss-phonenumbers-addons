@@ -55,5 +55,4 @@ https://launchpad.net/bss-phonenumbers-addons
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images': ['images/phonenumber.png', ],
 }
